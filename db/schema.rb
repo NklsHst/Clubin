@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 2018_05_29_125629) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.bigint "recepient_id"
-    t.index ["recepient_id"], name: "index_messages_on_recepient_id"
+    t.bigint "recipient_id"
+    t.index ["recipient_id"], name: "index_messages_on_recipient_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
@@ -87,5 +87,5 @@ ActiveRecord::Schema.define(version: 2018_05_29_125629) do
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "partner_id"
   add_foreign_key "messages", "users"
-  add_foreign_key "messages", "users", column: "recepient_id"
+  add_foreign_key "messages", "users", column: "recipient_id"
 end
