@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'locations#index', as: :locations
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+
+  root to: 'pages#home'
+  # root to: 'locations#index', as: :locations
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 #Routes for loaction controller
-# get '/locations', to: 'locations#index', as: :locations
+get '/locations', to: 'locations#index', as: :locations
 get '/locations/atmosphere', to: 'locations#index_atmosphere', as: :index_atmosphere
 get '/locations/queue', to: 'locations#index_queue', as: :index_queue
 get '/locations/:id', to: 'locations#show', as: :location
