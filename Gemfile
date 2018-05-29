@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+gem 'figaro'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'figaro'
@@ -29,3 +30,5 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'faker'
