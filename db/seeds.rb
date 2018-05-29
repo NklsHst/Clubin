@@ -137,26 +137,26 @@ Location.all.each do |location|
   locations << location
 end
 
-example_user_ids = (1..50).to_a
-i = 1
+# example_user_ids = (1..50).to_a
+# i = 1
 50.times do
   check_in = CheckIn.new(
     atmosphere_rating: (1..100).to_a.sample,
     queue_rating: (1..300).to_a.sample,
     location_id: (1..10).to_a.sample,
-    user_id: example_user_ids[i])
+    user_id: users.sample.id)
   check_in.save!
 
-  i += 1
+  # i += 1
 
   p check_in
   check_ins << check_in
 end
 
-100.times do
+25.times do
   friendship = Friendship.new(
-  user_id: (1..50).sample,
-  partner_id: (51..100).sample)
+  user_id: users.sample.id,
+  partner_id: users.sample.id)
   friendship.save!
 
   p friendship

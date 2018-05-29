@@ -1,3 +1,20 @@
 <% @locations.each do |location| %>
 <h5><%= location.name%></h5>
 <% end %>
+
+<div class="cards-container">
+  <div class="row">
+    <% @locations.each do |location| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= link_to location_path(location) do %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path location.photo%>')">
+          <div class="card-description">
+            <h5><%= location.name%></h5>
+          </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+</div>

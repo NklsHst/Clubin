@@ -4,7 +4,7 @@ ruby '2.4.4'
 gem 'figaro'
 gem 'bootsnap', require: false
 gem 'devise'
-gem 'figaro'
+
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
@@ -32,3 +32,5 @@ group :development, :test do
 end
 
 gem 'faker'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
