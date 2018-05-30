@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #C338FF;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 /* Search Field */
