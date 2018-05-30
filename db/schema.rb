@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_134149) do
+ActiveRecord::Schema.define(version: 2018_05_29_103303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "check_ins", force: :cascade do |t|
+    t.float "longitude"
+    t.float "latitude"
+    t.text "address"
+    t.integer "atmosphere_rating"
+    t.integer "queue_rating"
+    t.bigint "location_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_check_ins_on_location_id"
+    t.index ["user_id"], name: "index_check_ins_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.float "longitude"
+    t.float "latitude"
+    t.string "name"
+    t.string "address"
+    t.text "description"
+    t.text "picture"
+    t.string "music"
+    t.integer "price_rating"
+    t.integer "LGBT_rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,10 +65,15 @@ ActiveRecord::Schema.define(version: 2018_05_28_134149) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "user_name"
+    t.string "picture"
+    t.integer "facebook_uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "check_ins", "locations"
+  add_foreign_key "check_ins", "users"
 end

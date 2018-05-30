@@ -7,8 +7,8 @@ class CreateCheckIns < ActiveRecord::Migration[5.2]
       t.text :address
       t.integer :atmosphere_rating
       t.integer :queue_rating
-      t.reference :location, foreign_key: true
-      t.reference :user, foreign_key: true
+      t.references :location, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
