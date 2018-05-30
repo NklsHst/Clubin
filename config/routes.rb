@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   root to: 'pages#home'
   # root to: 'locations#index', as: :locations
@@ -20,4 +20,8 @@ get '/locations/:id/checkins', to: 'checkins#index_locations', as: :checkins_loc
 
 #Routes for messages controller
 #To be done have to think about how we set up the chat function
+
+#Routes for third party authentification management
+resources :authentications, only: [:destroy]
+
 end
