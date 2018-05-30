@@ -11,8 +11,8 @@ before_action :find, only: [:show] #gets right location from params[:id]
       {
         lat: location.latitude,
         lng: location.longitude,
-        # infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { flat: flat }) }
-        label: location.calculate_average_atmosphere.to_s
+        # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+        infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
     end
   end
