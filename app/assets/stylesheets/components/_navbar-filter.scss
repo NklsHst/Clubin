@@ -6,6 +6,10 @@
   align-items: center;
   width: 100%;
   border-bottom: 5px solid #EEEEEE;
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  z-index: 1;
 }
 
 .filter-item {
@@ -15,7 +19,7 @@
 }
 
 .filter-link {
-  color: #BBBBBB;
+  color: #606470;
   font-size: 16px;
 }
 
@@ -31,4 +35,8 @@
 
 #no-border {
   border-right: none;
+}
+
+#fire {
+  color: red;
 }
