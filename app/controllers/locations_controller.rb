@@ -18,15 +18,11 @@ before_action :find, only: [:show] #gets right location from params[:id]
   end
 
   def index_atmosphere
-    @locations = Location.all
+    @locations = Location.all.sort_by {|location| location.calculate_average_atmosphere}.reverse.first(5)
+  end
 
-    @locations.each do |location|
-      location.atmosphere_rating = location.calculate_average_atmosphere
-    end
-
-    @locations.sort_by! do |location| #note the exclamation mark
-    location[:atmosphere_rating]
-    end
+  def index_queue
+    @locations = Location.all.sort_by {|location| location.calculate_average_queue}.reverse.first(5)
   end
 
   def show
