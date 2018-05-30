@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_103303) do
+
+ActiveRecord::Schema.define(version: 2018_05_29_164131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +33,11 @@ ActiveRecord::Schema.define(version: 2018_05_29_103303) do
   create_table "friendships", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "partner_id"
+    t.index ["partner_id"], name: "index_friendships_on_partner_id"
+    t.index ["user_id"], name: "index_friendships_on_user_id"
+
   end
 
   create_table "locations", force: :cascade do |t|
@@ -46,12 +52,17 @@ ActiveRecord::Schema.define(version: 2018_05_29_103303) do
     t.integer "LGBT_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
   end
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "recipient_id"
+    t.index ["recipient_id"], name: "index_messages_on_recipient_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,4 +87,8 @@ ActiveRecord::Schema.define(version: 2018_05_29_103303) do
 
   add_foreign_key "check_ins", "locations"
   add_foreign_key "check_ins", "users"
+  add_foreign_key "friendships", "users"
+  add_foreign_key "friendships", "users", column: "partner_id"
+  add_foreign_key "messages", "users"
+  add_foreign_key "messages", "users", column: "recipient_id"
 end
