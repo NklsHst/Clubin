@@ -16,13 +16,12 @@ class CheckIn < ApplicationRecord
       # use next line instead of the one above for time logic (set the time frame for checkins to 3 hours)
       # checkedin_friends << check_in.user_id if user_partner_ids.include? check_in.user_id && Time.nom.utc - check_in.created_at < 1080
     end
-    end
     checkedin_friends
   end
 
   def all_strangers
     user_partner_ids = []
-    checkedin_friends = []
+    checkedin_strangers = []
     check_ins = CheckIn.all
 
     current_user.friendships.each do |friendship|
@@ -30,11 +29,10 @@ class CheckIn < ApplicationRecord
     end
 
     check_ins.each do |check_in|
-      checkedin_friends << check_in.user_id unless user_partner_ids.include? check_in.user_id
+      checkedin_strangers << check_in.user_id unless user_partner_ids.include? check_in.user_id
       # use next line instead of the one above for time logic (set the time frame for checkins to 3 hours)
-      # checkedin_friends << check_in.user_id unless user_partner_ids.include? check_in.user_id || Time.nom.utc - check_in.created_at > 1080
+      # checkedin_strangers << check_in.user_id unless user_partner_ids.include? check_in.user_id || Time.nom.utc - check_in.created_at > 1080
     end
-    end
-    checkedin_friends
+    checkedin_strangers
   end
 end
