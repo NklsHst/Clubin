@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   has_many :checkins
+  has_many :friendships
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

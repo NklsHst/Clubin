@@ -27,4 +27,17 @@ class Location < ApplicationRecord
     end
     users
   end
+
+  def checkedin_friends
+    check_ins = self.check_ins
+    user_partner_ids = []
+    checkedin_friends = []
+    current_user.friendships.each do |friendship|
+      user_partner_ids << friendship.partner_id
+    end
+    check_ins.each do |check_in|
+      checkedin_friends << check_in.user_id if user_partner_ids.include? check_in.user_id
+    end
+    checkedin_friends
+  end
 end
