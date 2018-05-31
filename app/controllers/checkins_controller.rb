@@ -10,6 +10,16 @@ class CheckinsController < ApplicationController
     @checkin.location = @location
     @checkin.user = current_user
     @checkin.save
+
+    redirect_to checkins_evaluation_path(@location, @checkin)
+  end
+
+  def evaluation
+  end
+
+  def update
+     @checkin = CheckIn.find(params[:checkin_id])
+     @checkin.update(checkin_params)
   end
 
   private
@@ -19,7 +29,7 @@ class CheckinsController < ApplicationController
   end
 
   def checkin_params
-    params.require(:check_in).permit(:latitude, :longitude)
+    params.require(:check_in).permit(:latitude, :longitude, :atmosphere_rating, :queue_rating)
   end
 
 end

@@ -17,6 +17,8 @@ post '/locations/:id/checkin/create', to: 'checkins#create', as: :checkins_creat
 get '/checkins/friends', to: 'checkins#index_friends', as: :checkins_friends
 get '/checkins/partypeople', to: 'checkins#index_partypeople', as: :checkins_partypeople
 get '/locations/:id/checkins', to: 'checkins#index_locations', as: :checkins_location
+get '/locations/:id/checkin/:checkin_id/evaluation', to: 'checkins#evaluation', as: :checkins_evaluation
+patch '/locations/:id/checkin/:checkin_id/edit', to: 'checkins#update'
 
 #Routes for messages controller
 #To be done have to think about how we set up the chat function

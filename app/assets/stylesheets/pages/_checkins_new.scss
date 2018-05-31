@@ -1,0 +1,24 @@
+.checkin-container {
+  background-color: #eaa3fc;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-around;
+  display: flex;
+  height: calc(100vh - 140px);
+  align-items: center;
+  text-align: center;
+}
+
+.logo-picture-big {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.checkin-form h3 {
+  font-size: 28px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 20px;
+}

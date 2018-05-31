@@ -1,5 +1,11 @@
-<%= simple_form_for(@checkin, url: checkins_create_path, method: :post) do |f| %>
-  <%= f.input :latitude, as: :hidden, id: :"lat" %>
-  <%= f.input :longitude, as: :hidden, id: :"lng" %>
-<% end %>
-<button id="checkin" >Checkin now</button>
+<!-- <div class="checkin-container">
+  <div class="checkin-form">
+    <h3>Tap to Check-in</h3> -->
+    <%= simple_form_for(@checkin, url: checkins_create_path, method: :post) do |f| %>
+    <%= f.input :latitude, as: :hidden, id: :"lat" %>
+    <%= f.input :longitude, as: :hidden, id: :"lng" %>
+    <% end %>
+    <button id="checkin"><%= image_tag "new-logo.jpg", class: "logo-picture-big" %></button>
+ <!--  </div>
+
+</div> -->
