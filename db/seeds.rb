@@ -157,7 +157,11 @@ end
   friendship = Friendship.new(
   user_id: users.sample.id,
   partner_id: users.sample.id)
-  friendship.save!
+  if friendship.user_id != friendship.partner_id
+    friendship.save!
+  else
+    friendship.destroy!
+  end
 
   p friendship
   friendships << friendship
