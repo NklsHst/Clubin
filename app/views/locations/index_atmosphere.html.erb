@@ -1,19 +1,20 @@
 <div class="navbar-filter">
-  <%= link_to "#", class: "filter-item filter-link", style: "text-align: center" do %>
-    <i class="fas fa-map"></i> Map
+  <%= link_to locations_path, class: "filter-item filter-link", style: "text-align: center" do %>
+  <i class="fas fa-map"></i> Map
   <% end %>
-  <%= link_to "#", class: "filter-item filter-link", style: "text-align: center" do %>
-    <i class="fas fa-burn"></i> Hot
+  <%= link_to index_atmosphere_path, class: "filter-item filter-link", style: "text-align: center" do %>
+  <i class="fas fa-burn"></i> Hot
   <% end %>
-  <%= link_to "#", class: "filter-item filter-link", id: "no-border", style: "text-align: center" do %>
-    <i class="far fa-clock"></i> Queue
+  <%= link_to index_queue_path, class: "filter-item filter-link", id: "no-border", style: "text-align: center" do %>
+  <i class="far fa-clock"></i> Queue
   <% end %>
 </div>
 
+<div class="page-content">
 <h2>Best locations tonight</h2>
 
 <div class="container">
-    <% @locations.each do |location| %>
+  <% @locations.each do |location| %>
   <div class="row">
     <div class="col-xs-4">
       <div class="club-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path location.photo%>')">
@@ -24,9 +25,9 @@
       <div class="row" id="no-border">
         <ul class="list-inline">
           <li><i class="fas fa-burn"></i></li>
-          <li id="score">8,7</li>
+          <li id="score"><%=location.calculate_average_atmosphere %></li>
           <li><i class="far fa-clock"></i></li>
-          <li id="score">1,5h</li>
+          <li id="score"><%= location.calculate_average_queue %></li>
           <li><i class="fas fa-users"></i></li>
           <li id="score">2</li>
         </ul>
@@ -36,13 +37,3 @@
   <% end %>
 </div>
 </div>
-
-<!-- Variable for the atmosphere index page when used inside the following loop @locations.each do |location|
-----------------------------------------------------
-name -> location.name
-atmosphere -> location.calculate_average_atmosphere
-queue_time -> location.calculate_average_queue
-number_of_friends -> tbd
-link -> link_to location_path(location)
-same holds for index_queue view-->
-

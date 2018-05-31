@@ -1,4 +1,21 @@
+<div class="navbar-filter">
+  <%= link_to locations_path, class: "filter-item filter-link", style: "text-align: center" do %>
+  <i class="fas fa-map"></i> Map
+  <% end %>
+  <%= link_to index_atmosphere_path, class: "filter-item filter-link", style: "text-align: center" do %>
+  <i class="fas fa-burn"></i> Hot
+  <% end %>
+  <%= link_to index_queue_path, class: "filter-item filter-link", id: "no-border", style: "text-align: center" do %>
+  <i class="far fa-clock"></i> Queue
+  <% end %>
+</div>
+
+<div class="page-content">
+<h2>Party overview</h2>
+
 <div id="map"
   style= "height: 600px;"
-  data-markers="<%= @markers.to_json %>"></div>
+  data-markers="<%= @markers.to_json %>">
+  </div>
+</div>
 
