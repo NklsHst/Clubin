@@ -3,5 +3,5 @@ import "bootstrap";
 import { getLocation } from "./getlocation.js";
 
 
-// const checkin = document.getElementById("checkin")
-// checkin.addEventListener("click", getLocation)
+const checkin = document.getElementById("checkin")
+checkin.addEventListener("click", getLocation)
