@@ -9,9 +9,15 @@ class CheckinsController < ApplicationController
     @checkin = CheckIn.new(checkin_params)
     @checkin.location = @location
     @checkin.user = current_user
-    @checkin.save
 
-    redirect_to checkins_evaluation_path(@location, @checkin)
+    if @location.geocoded? && @checkin.geocoded? && (@location.distance_from(@checkin) < 0.186411)
+      @checkin.save
+
+      redirect_to checkins_evaluation_path(@location, @checkin)
+    else
+      flash[:alert] = "You need to be within a radius of 300 meters of the location to check in."
+      redirect_to checkins_new_path(@location)
+    end
   end
 
   def evaluation
