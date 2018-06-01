@@ -1,4 +1,9 @@
-class Message < ApplicationRecord
+class Message < ActiveRecord::Base
+  belongs_to :conversation
   belongs_to :user
-  belongs_to :recipient, class_name: "User", foreign_key: "recipient_id"
+  validates_presence_of :body, :conversation_id, :user_id
+
+  def message_time
+    created_at.strftime("%e %B at %H:%M:%S")
+  end
 end
