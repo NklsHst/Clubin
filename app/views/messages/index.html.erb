@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <% if @over_five %>
+        <%= link_to "Show Previous", "?m=all", class: "show-prev" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row messages">
+    <div class="col-xs-10 col-xs-offset-1">
+        <% @messages.each do |message| %>
+          <div class="msg-structure">
+            <%= cl_image_tag message.user.picture, class: "avatar img-circle" if message.user == current_user %>
+            <div class="<%= "me" if message.user == current_user %> message">
+              <% if message.body %>
+                <% user = User.find(message.user_id) %>
+                <div class="content">
+                  <div class="header">
+                    <strong><%= user.user_name %></strong> <%= message.message_time %>
+                  </div>
+                  <div class="body">
+                    <%= message.body %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+             <%= cl_image_tag message.user.picture, class: "avatar img-circle" if message.user != current_user && ( message && user ) != nil %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <%= form_for [@conversation, @message], html: {class: "reply-form form-group"} do |f| %>
+        <%= f.text_area :body, class: "input-field" %>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+        <%= f.submit "Reply", class: "input-button" %>
+      <% end %>
+  </div>
+</div>

@@ -21,7 +21,9 @@ get '/locations/:id/checkin/:checkin_id/evaluation', to: 'checkins#evaluation', 
 patch '/locations/:id/checkin/:checkin_id/edit', to: 'checkins#update'
 
 #Routes for messages controller
-#To be done have to think about how we set up the chat function
+resources :conversations do
+  resources :messages
+ end
 
 #Routes for third party authentification management
 resources :authentications, only: [:destroy]
