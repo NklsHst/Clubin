@@ -3,7 +3,7 @@ class Location < ApplicationRecord
   has_many :users, through: :check_ins
 
   geocoded_by :address
-  after_validation :geocode #, if: :will_save_change_to_address?
+  after_validation :geocode, if: :will_save_change_to_address?
 
   mount_uploader :photo, PhotoUploader
 
@@ -14,5 +14,5 @@ class Location < ApplicationRecord
 
   def calculate_average_queue
     check_ins.pluck(:queue_rating).compact.sum / check_ins.count
-  end 
+  end
 end
