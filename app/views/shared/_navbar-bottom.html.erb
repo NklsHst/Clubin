@@ -8,10 +8,10 @@
   <%= link_to "#", class: "bottom-item bottom-link", style: "text-align: center" do %>
     <i class="fas fa-map-marker"></i>
   <% end %>
-  <%= link_to "#", class: "bottom-item bottom-link", style: "text-align: center" do %>
+  <%= link_to conversations_path, class: "bottom-item bottom-link", style: "text-align: center" do %>
     <i class="fas fa-comments"></i>
   <% end %>
-  <%= link_to "#", class: "bottom-item bottom-link", style: "text-align: center" do %>
+  <%= link_to profile_path(current_user), class: "bottom-item bottom-link", style: "text-align: center" do %>
     <i class="fas fa-user-circle"></i>
   <% end %>
 </div>

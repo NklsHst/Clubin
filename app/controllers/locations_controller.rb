@@ -8,6 +8,7 @@ before_action :find, only: [:show] #gets right location from params[:id]
     @locations = Location.all
 
     @markers = @locations.map do |location|
+      next if location.latitude.nil? || location.longitude.nil?
       {
         lat: location.latitude,
         lng: location.longitude,
@@ -15,6 +16,7 @@ before_action :find, only: [:show] #gets right location from params[:id]
         infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
     end
+    @markers = @markers.compact
   end
 
   def index_atmosphere
