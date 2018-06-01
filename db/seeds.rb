@@ -42,6 +42,7 @@ photos = [
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527170737/d9pxyc0unkkt0yzmtgif.jpg',
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527171480/mvltk3ugbhutnvkj1nfd.jpg',
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527172553/mb19whtgatolc6p6h7fa.jpg',
+  'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527862547/lewagon.jpg',
 ]
 
 location = Location.create!([{
@@ -125,6 +126,14 @@ location = Location.create!([{
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
   LGBT_rating: (1..5).to_a.sample,
+  },
+  {
+  name: "Le Wagon Kitchen",
+  description: "Legendary Cocktail-Nights every second Friday of the month",
+  address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
+  music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
+  price_rating: (1..5).to_a.sample,
+  LGBT_rating: (1..5).to_a.sample,
   }])
 
   p location
@@ -143,7 +152,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
     user_id: users.sample.id)
   check_in.save!
 
