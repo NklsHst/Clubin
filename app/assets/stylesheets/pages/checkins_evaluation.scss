@@ -1,4 +1,4 @@
-.checkin-container {
+.evaluation-container {
   background-color: #EEEEEE;
   width: 100%;
   height: 100vh;
@@ -9,16 +9,17 @@
   text-align: center;
 }
 
-.logo-picture-big {
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.checkin-form h3 {
+.evaluation-form h3 {
   font-size: 28px;
   font-weight: bolder;
   color: #606470;
   margin-bottom: 20px;
 }
+
+.evaluation-form .btn-primary {
+   width: 160px;
+    color: white;
+    background-color: #C338FF;
+    border: 1px solid white;
+}
+

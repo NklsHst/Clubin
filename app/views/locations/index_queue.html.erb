@@ -16,6 +16,7 @@
 <div class="container">
   <% @locations.each do |location| %>
   <div class="row">
+    <%= link_to location_path(location) do %>
     <div class="col-xs-4">
       <div class="club-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path location.photo%>')">
       </div>
@@ -33,6 +34,7 @@
         </ul>
       </div>
     </div>
+    <% end %>
   </div>
   <% end %>
 </div>
