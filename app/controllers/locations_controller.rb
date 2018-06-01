@@ -26,7 +26,9 @@ before_action :find, only: [:show] #gets right location from params[:id]
   end
 
   def show
-    @location
+    @checkin_users = @location.users
+    @checkin_friends = @location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)
+    @checkin_strangers = @location.users - @checkin_friends - [current_user]
   end
 
   private
