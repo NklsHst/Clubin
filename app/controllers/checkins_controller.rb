@@ -1,5 +1,5 @@
 class CheckinsController < ApplicationController
-  before_action :set_location, only: [:new, :create]
+  before_action :set_location, only: [:new, :create, :update]
 
   # for feed of CheckIns --> not tested yet
   # def show

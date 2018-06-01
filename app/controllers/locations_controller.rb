@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-before_action :authenticate_user!, :except => [:index, :show, :index_atmosphere, :index_queue]
+before_action :authenticate_user!
 before_action :find, only: [:show] #gets right location from params[:id]
 
 
