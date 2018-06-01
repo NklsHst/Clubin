@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  root to: 'pages#home'
+  get "users/me/", to: "users#show", as: :profile
+
+  root to: 'locations#index'
   # root to: 'locations#index', as: :locations
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
