@@ -46,11 +46,19 @@ class CheckinsController < ApplicationController
   end
 
   def evaluation
+    @checkin = CheckIn.find(params[:checkin_id])
   end
 
   def update
      @checkin = CheckIn.find(params[:checkin_id])
      @checkin.update(checkin_params)
+     @checkin.save
+
+     redirect_to checkins_final_path(@location, @checkin)
+  end
+
+  def final
+    @checkin = CheckIn.find(params[:checkin_id])
   end
 
   private

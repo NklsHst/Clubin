@@ -47,6 +47,7 @@ h2 {
 #no-border {
   border-bottom: none;
   border-top: none;
+  color: #606470;
 }
 
 #score {
@@ -57,8 +58,13 @@ h2 {
 .container h5 {
   font-weight: bolder;
   font-size: 16px;
+  color: #606470;
 }
 
 .page-content {
   padding-top: 50px;
+}
+
+.no-purple {
+  color: #606470;
 }

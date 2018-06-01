@@ -141,8 +141,8 @@ end
 # i = 1
 50.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..100).to_a.sample,
-    queue_rating: (1..300).to_a.sample,
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
     location_id: (1..10).to_a.sample,
     user_id: users.sample.id)
   check_in.save!

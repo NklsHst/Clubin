@@ -1,0 +1,19 @@
+.br-theme-bars-1to10 .br-widget a.br-selected {
+    background-color: #C338FF !important;
+    width: 15px !important;
+}
+
+.br-theme-bars-1to10 .br-widget a {
+  background-color: white !important;
+}
+
+.br-widget {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.br-theme-bars-1to10 .br-widget .br-current-rating {
+  display: none;
+}
