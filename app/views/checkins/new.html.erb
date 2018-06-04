@@ -1,11 +1,35 @@
-<div class="checkin-container">
-  <div class="checkin-form">
-    <h3>Tap to Check-in</h3>
-    <%= simple_form_for(@checkin, url: checkins_create_path, method: :post) do |f| %>
-    <%= f.input :latitude, as: :hidden, id: :"lat" %>
-    <%= f.input :longitude, as: :hidden, id: :"lng" %>
-    <% end %>
-    <button id="checkin"><%= image_tag "new-logo.jpg", class: "logo-picture-big" %></button>
+<%= javascript_pack_tag 'getlocation' %>
+
+<div class="container" id="checkin-container">
+  <div class="row" style="height: 45vh;">
+    <div class="col-xs-10">
+      <h1 style="text-align: center"> Check in</h1>
+      <div class="div" id="location">
+        <p> Loading your location, please wait...</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10">
+      <%= simple_form_for(@checkin, url: checkins_create_path, method: :post) do |f| %>
+      <%= f.input :latitude, as: :hidden, id: :"lat" %>
+      <%= f.input :longitude, as: :hidden, id: :"lng" %>
+      <%= f.input :location_id, as: :hidden, id: :".location_id" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row" style="height: 50vh;">
+    <div class="centered-circle">
+      <div id="loader-parent" style="position: relative;">
+        <div class="loader" id="loader"></div>
+      </div>
+      <div id="checkin-parent">
+        <button id="checkin"><%= image_tag "new-logo.jpg", class: "logo-picture-big" %></button>
+      </div>
+    </div>
   </div>
 
 </div>
+
+<!-- <%= link_to "Try again", checkins_new_path(@location) %> -->
+

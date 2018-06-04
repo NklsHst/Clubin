@@ -41,10 +41,6 @@ before_action :find, only: [:show] #gets right location from params[:id]
         infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) }
       }
     @markers << @marker
-
-
-      # raise
-
   end
 
 
