@@ -19,6 +19,59 @@ locations = []
 check_ins = []
 friendships = []
 
+pictures = [
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528124009/profile_52.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528124002/profile_51.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123948/profile_50.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123940/profile_49.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123931/profile_48.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123923/profile_47.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123914/profile_46.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123895/profile_44.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123905/profile_45.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123867/profile_41.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123887/profile_43.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123878/profile_42.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123853/profile_39.png',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123824/profile_37.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123844/profile_38.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123809/profile_35.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123797/profile_34.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528123773/profile_33.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122186/profile_32.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122175/profile_31.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122166/profile_30.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122156/profile_29.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122146/profile_28.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122134/profile_27.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122127/profile_26.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122101/profile_25.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122093/profile_24.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122085/profile_23.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122071/profile_22.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122060/profile_21.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122047/profile_20.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122035/profile_19.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122026/profile_18.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122017/profile_17.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528122006/profile_16.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121997/profile_15.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121989/profile_14.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121979/profile_13.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121971/profile_12.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121958/profile_11.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121947/profile_10.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121937/profile_9.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121925/profile_8.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121915/profile_7.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121906/profile_6.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121898/profile_5.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121889/profile_4.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121880/profile_3.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121868/profile_2.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121858/profile_1.jpg'
+]
+
 50.times do
   user = User.new(
     user_name: Faker::Name.first_name,
@@ -26,8 +79,14 @@ friendships = []
     password: "yooooooooo",
     password_confirmation: "yooooooooo")
   user.save!
-
   p user
+end
+
+  User.all.each do |user|
+  user.remote_picture_url = pictures.delete_at(0)
+  user.save
+  p user
+
   users << user
 end
 
