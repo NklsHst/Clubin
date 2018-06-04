@@ -13,7 +13,6 @@
   height: 180px;
   width: 180px;
   border-radius: 50%;
-  z-index: 1;
 }
 
 .checkin-form h3 {
@@ -21,4 +20,41 @@
   font-weight: bolder;
   color: #606470;
   margin-bottom: 20px;
+}
+
+.checkin {
+  display: none;
+}
+
+#location {
+  position: relative;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    background-color: white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.centered-circle {
+  width: 200px;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button {
+background-color: white;
+border: none;
+text-decoration: none;
 }
