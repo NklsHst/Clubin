@@ -17,7 +17,6 @@ before_action :find, only: [:show] #gets right location from params[:id]
       }
     end
     @markers = @markers.compact
-    raise
   end
 
   def index_atmosphere
