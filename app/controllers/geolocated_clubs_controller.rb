@@ -4,7 +4,7 @@ class GeolocatedClubsController < ApplicationController
 
   def index
 
-    max_distance = 2
+    max_distance = 0.3
     coords = [params[:lat], params[:lng]]
     locations = Location.near(coords, 2, :units => :km)
     locations_sorted = locations.sort_by { |l| Geocoder::Calculations.distance_between(l, coords) }
