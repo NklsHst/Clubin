@@ -1,5 +1,5 @@
 class CheckinsController < ApplicationController
-  before_action :set_location, only: [:new, :create, :update]
+  before_action :set_location, only: [:create, :update]
 
   def index
     @all_checkins = CheckIn.all
@@ -31,7 +31,7 @@ class CheckinsController < ApplicationController
   def create
     @checkin = CheckIn.new(checkin_params)
     @checkin.user = current_user
-    @location = Location.find(params[:check_in][:location_id])
+    @location = Location.find(params[:check_in][:location_id]) unless params[:check_in][:location_id].nil?
 
     if @location.geocoded? && @checkin.geocoded?
       @checkin.save
@@ -61,7 +61,8 @@ class CheckinsController < ApplicationController
   private
 
   def set_location
-    @location = Location.find(params[:id])
+    # @location = Location.find(params[:id])
+    @location = Location.find(params[:check_in][:location_id]) unless params[:check_in][:location_id].nil?
   end
 
   def checkin_params

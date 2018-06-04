@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   patch '/locations/:id/checkin/:checkin_id/edit', to: 'checkins#update', as: :checkins_update
   get '/locations/:id/checkin/:checkin_id/evaluation', to: 'checkins#evaluation', as: :checkins_evaluation
   get '/locations/:id/checkin/:checkin_id/final', to: 'checkins#final', as: :checkins_final
-  
+
   get '/checkins/all', to: 'checkins#index', as: :checkins_all
   get '/checkins/partypeople', to: 'checkins#index_partypeople', as: :checkins_partypeople
   get '/locations/:id/checkins', to: 'checkins#index_locations', as: :checkins_location
