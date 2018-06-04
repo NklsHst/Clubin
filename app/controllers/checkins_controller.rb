@@ -1,5 +1,5 @@
 class CheckinsController < ApplicationController
-  before_action :set_location, only: [:create, :update]
+  before_action :set_location, only: [:create]
 
   def index
     @all_checkins = CheckIn.all
@@ -47,6 +47,7 @@ class CheckinsController < ApplicationController
   end
 
   def update
+     @location = Location.find(params[:id]) unless params[:id].nil?
      @checkin = CheckIn.find(params[:checkin_id])
      @checkin.update(checkin_params)
      @checkin.save
