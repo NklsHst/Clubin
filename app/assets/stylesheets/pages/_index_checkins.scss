@@ -1,0 +1,23 @@
+.checkin-time h6{
+  color: #606470;
+}
+
+.search-input-wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  form {
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 0px;
+  }
+}
+
+.filter-item-1 {
+  cursor: pointer;
+  width: 50%;
+  border-right: 1px solid #EEEEEE;
+}

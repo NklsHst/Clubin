@@ -1,0 +1,37 @@
+.evaluation-container {
+  background-color: #EEEEEE;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-around;
+  display: flex;
+  height: calc(100vh - 140px);
+  align-items: center;
+  text-align: center;
+}
+
+.evaluation-form h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #606470;
+  margin-bottom: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.evaluation-form .btn-primary {
+   width: 160px;
+    color: white;
+    background-color: #C338FF;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+.evaluation-form h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.evaluation-form h4 {
+  font-size: 20px;
+  margin-bottom: 65px;
+}
