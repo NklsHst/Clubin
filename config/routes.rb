@@ -16,7 +16,7 @@ get '/locations/:id', to: 'locations#show', as: :location
 #Routes for checkin controller
 get '/locations/:id/checkin', to: 'checkins#new', as: :checkins_new
 post '/locations/:id/checkin/create', to: 'checkins#create', as: :checkins_create
-get '/checkins/friends', to: 'checkins#index_friends', as: :checkins_friends
+get '/checkins/all', to: 'checkins#index', as: :checkins_all
 get '/checkins/partypeople', to: 'checkins#index_partypeople', as: :checkins_partypeople
 get '/locations/:id/checkins', to: 'checkins#index_locations', as: :checkins_location
 get '/locations/:id/checkin/:checkin_id/evaluation', to: 'checkins#evaluation', as: :checkins_evaluation
