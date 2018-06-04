@@ -9,10 +9,10 @@ class Location < ApplicationRecord
 
 
   def calculate_average_atmosphere
-    check_ins.pluck(:atmosphere_rating).compact.sum / check_ins.count
+    check_ins.pluck(:atmosphere_rating).compact.sum / check_ins.count unless check_ins.length == 0
   end
 
   def calculate_average_queue
-    check_ins.pluck(:queue_rating).compact.sum / check_ins.count
+    check_ins.pluck(:queue_rating).compact.sum / check_ins.count unless check_ins.length == 0
   end
 end

@@ -1,31 +1,33 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <h3>Your chats:</h3>
+      <h3>Your existing chats:</h3>
       <div class=”item”>
        <% @conversations.each do |conversation| %>
-         <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-              <% if conversation.sender_id == current_user.id %>
-                <% recipient = User.find(conversation.recipient_id) %>
-              <% else %>
-                <% recipient = User.find(conversation.sender_id) %>
-              <% end %>
-            <%= link_to recipient.user_name,   conversation_messages_path(conversation)%>
-         <% end %>
+       <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+       <% if conversation.sender_id == current_user.id %>
+       <% recipient = User.find(conversation.recipient_id) %>
+       <% else %>
+       <% recipient = User.find(conversation.sender_id) %>
        <% end %>
+       <div>
+        <%= recipient.user_name %> <%= link_to "Message me!", conversation_messages_path(conversation)%>
       </div>
+      <% end %>
+      <% end %>
     </div>
   </div>
-  <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <h3>All Users</h3>
-        <% @users.each do |user| %>
-          <% if user.id != current_user.id && ## if in same location %>
-            <div class=”item”>
-              <%= user.user_name %> <%= link_to "Message me!", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
+</div>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <h3>Other Users checked in at <%= @checkin.location.name %></h3>
+    <% @users.each do |user| %>
+    <% if user.id != current_user.id && ## if in same location %>
+    <div class=”item”>
+      <%= user.user_name %> <%= link_to "Message me!", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
+    </div>
+    <% end %>
+    <% end %>
   </div>
+</div>
 </div>
