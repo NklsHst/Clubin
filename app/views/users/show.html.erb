@@ -1,2 +1,39 @@
-<%= link_to "Edit profile", edit_user_registration_path(@user) %>
-<%= link_to "Sign Out", destroy_user_session_path(@user), method: "delete" %>
+<div class="navbar-filter">
+  <%= link_to edit_user_registration_path(@user), class: "filter-item-1 filter-link", style: "text-align: center" do %>
+  <i class="far fa-edit"></i> Edit profile
+  <% end %>
+  <%= link_to destroy_user_session_path(@user), class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center" do %>
+  <i class="fas fa-sign-out-alt"></i> Sign Out
+  <% end %>
+</div>
+
+<div class="page-content">
+<h2><%= @user.user_name %></h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="profile-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.picture %>')">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        <div class="club-description user-description">
+          <h5>About me</h5>
+          <p> I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin. </p>
+          <h5>My favorite clubs </h5>
+          <p> Berghain, Heideglühen, Kater Blau </p>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+

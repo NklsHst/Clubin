@@ -16,97 +16,61 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="user_banner">
-          <div class="user-profiles">
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Anna</div>
-            </div>
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Bert</div>
-            </div>
-              <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Max</div>
-            </div>
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Tobias</div>
-            </div>
-              <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Fabian</div>
-            </div>
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Henry</div>
-            </div>
-              <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Max</div>
-            </div>
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Carlos</div>
-            </div>
-              <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Carlotta</div>
-            </div>
-            <div class="user-profile">
-              <img src="<%= image_path 'profile_3.jpg' %>" class="avatar">
-              <div class="user-name">Maximil.</div>
-            </div>
+          <% @checkin_friends.each do |checkin| %>
+          <div class="user-profile">
+            <img src="<%= cl_image_path checkin.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+            <div class="user-name"><%= checkin.user_name %></div>
           </div>
+          <% end %>
         </div>
       </div>
-      </div>
-      <div class="row">
+    </div>
+    <div class="row">
       <div class="col-xs-12">
        <div id="map"
        style= "height: 200px;"
        data-markers="<%= @markers.to_json %>">
-      </div>
+     </div>
    </div>
-      </div>
-    </div>
-    <div class="row">
-      <ul class="list-inline" id="list-details">
-          <li><i class="fas fa-burn"></i></li>
-          <li id="score"><%= @location.calculate_average_atmosphere %></li>
-          <li><i class="far fa-clock"></i></li>
-          <li id="score"><%= @location.calculate_average_queue %></li>
-          <li><i class="fas fa-users"></i></li>
-          <li id="score">2</li>
-        </ul>
-    </div>
-    <div class="row">
-      <ul class="list-inline" id="list-details-2">
-          <li><i class="fas fa-music"></i></li>
-          <li id="score"><%= @location.music %></li>
-          <li><i class="fas fa-euro-sign"></i></li>
-          <li id="score"><%= @location.price_rating %></li>
-          <li><img src="<%= image_path 'lgbt-flag.png' %>" class="flag"></li>
-          <li id="score"><%= @location.LGBT_rating %></li>
-        </ul>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="club-description">
-          <h5>About the club</h5>
-          <%= @location.description %>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="address">
-          <h5>Contact details</h5>
-            <h6>Address: <%= @location.address %></h6>
-            <h6>Phone: 030-123456</h6>
-            <h6>Open: Friday to Sunday : 22.00 - 08.00</h6>
-        </div>
-      </div>
+ </div>
+</div>
+<div class="row">
+  <ul class="list-inline" id="list-details">
+    <li><i class="fas fa-burn"></i></li>
+    <li id="score"><%= @location.calculate_average_atmosphere %></li>
+    <li><i class="far fa-clock"></i></li>
+    <li id="score"><%= @location.calculate_average_queue %></li>
+    <li><i class="fas fa-users"></i></li>
+    <li id="score">2</li>
+  </ul>
+</div>
+<div class="row">
+  <ul class="list-inline" id="list-details-2">
+    <li><i class="fas fa-music"></i></li>
+    <li id="score"><%= @location.music %></li>
+    <li><i class="fas fa-euro-sign"></i></li>
+    <li id="score"><%= @location.price_rating %></li>
+    <li><img src="<%= image_path 'lgbt-flag.png' %>" class="flag"></li>
+    <li id="score"><%= @location.LGBT_rating %></li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="club-description">
+      <h5>About the club</h5>
+      <%= @location.description %>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="address">
+      <h5>Contact details</h5>
+      <h6>Address: <%= @location.address %></h6>
+      <h6>Phone: 030-123456</h6>
+      <h6>Open: Friday to Sunday : 22.00 - 08.00</h6>
+    </div>
+  </div>
+</div>
+</div>
 </div>

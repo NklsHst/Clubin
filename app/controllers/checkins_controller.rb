@@ -24,9 +24,9 @@ class CheckinsController < ApplicationController
     end
   end
 
-  def index
-    @checkins = CheckIn.all
-  end
+  # def index
+  #   @checkins = CheckIn.all
+  # end
 
   def new
     @checkin = CheckIn.new
