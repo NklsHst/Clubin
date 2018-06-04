@@ -13,10 +13,11 @@ before_action :find, only: [:show] #gets right location from params[:id]
         lat: location.latitude,
         lng: location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
-        infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
+        # infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
     end
     @markers = @markers.compact
+    raise
   end
 
   def index_atmosphere
@@ -31,7 +32,22 @@ before_action :find, only: [:show] #gets right location from params[:id]
     @checkin_users = @location.users
     @checkin_friends = @location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)
     @checkin_strangers = @location.users - @checkin_friends - [current_user]
+
+    @markers = []
+    @marker =
+      {
+        lat: @location.latitude,
+        lng: @location.longitude,
+        # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+        infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) }
+      }
+    @markers << @marker
+
+
+      # raise
+
   end
+
 
   private
 
