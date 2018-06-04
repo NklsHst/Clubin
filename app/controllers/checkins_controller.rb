@@ -1,5 +1,5 @@
 class CheckinsController < ApplicationController
-  before_action :set_location, only: [:new, :create]
+  # before_action :set_location, only: [:new, :create]
 
   # for feed of CheckIns --> not tested yet
   # def show
@@ -32,15 +32,13 @@ class CheckinsController < ApplicationController
 
   def create
     @checkin = CheckIn.new(checkin_params)
-    @checkin.location = @location
     @checkin.user = current_user
 
-    if @location.geocoded? && @checkin.geocoded? && (@location.distance_from(@checkin) < 0.186411)
+    if @location.geocoded? && @checkin.geocoded?
       @checkin.save
 
       redirect_to checkins_evaluation_path(@location, @checkin)
     else
-      flash[:alert] = "You need to be within a radius of 300 meters of the location to check in."
       redirect_to checkins_new_path(@location)
     end
   end
@@ -60,7 +58,7 @@ class CheckinsController < ApplicationController
   end
 
   def checkin_params
-    params.require(:check_in).permit(:latitude, :longitude, :atmosphere_rating, :queue_rating)
+    params.require(:check_in).permit(:location_id, :latitude, :longitude, :atmosphere_rating, :queue_rating)
   end
 
 end
