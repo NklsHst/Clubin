@@ -10,10 +10,12 @@
 }
 
 .evaluation-form h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bolder;
   color: #606470;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .evaluation-form .btn-primary {
@@ -21,5 +23,15 @@
     color: white;
     background-color: #C338FF;
     border: 1px solid white;
+    margin-top: 20px;
 }
 
+.evaluation-form h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.evaluation-form h4 {
+  font-size: 20px;
+  margin-bottom: 65px;
+}

@@ -1,6 +1,7 @@
 <div class="evaluation-container">
   <div class="evaluation-form">
-    <h2><%= @checkin.address %></h2>
+    <h2>Welcome to <%= @checkin.location.name %></h2>
+    <h4><%= @checkin.location.address %></h4>
       <h3>Share with the Club.In comunity</h3>
     <%= simple_form_for(@checkin, url: checkins_update_path, method: :patch) do |f| %>
     <%= f.input :atmosphere_rating, :collection => (1..10).to_a %>
