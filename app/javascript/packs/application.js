@@ -8,4 +8,3 @@ import 'jquery-bar-rating/dist/themes/bars-1to10.css';
 
 const checkin = document.getElementById("checkin")
 checkin.addEventListener("click", getLocation)
-
