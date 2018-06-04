@@ -1,16 +1,16 @@
 <div class="navbar-filter nav nav-tabs" role="tablist">
-<ul class="navbar-filter nav-tabs" role="tablist">
-  <li role="presentation" class="active">
-    <a class="filter-item-1" href="#friends" aria-controls="friends" role="tab" data-toggle="tab">
-      <i class="fas fa-user-friends"></i> Friends only
-    </a>
-  </li>
-  <li role="presentation" class="">
-    <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
-      <i class="fas fa-users"></i> All check-ins
-    </a>
-  </li>
-</ul>
+  <ul class="navbar-filter nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a class="filter-item-1" href="#friends" aria-controls="friends" role="tab" data-toggle="tab">
+        <i class="fas fa-user-friends"></i> Friends only
+      </a>
+    </li>
+    <li role="presentation" class="">
+      <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
+        <i class="fas fa-users"></i> All check-ins
+      </a>
+    </li>
+  </ul>
 </div>
 <!--
   <div role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></div>
@@ -28,32 +28,14 @@
           <%= link_to profile_path(checkin.user) do %>
           <div class="col-xs-2">
             <div class="user-profile" style="margin-top: 15px;">
-              <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
-            </div>
-          </div>
-          <div class="col-xs-8" class="no-purple">
-            <h5><%= link_to checkin.user.user_name, profile_path(checkin.user), style: "color: #606470" %></h5>
-            <h5><span style="font-weight: normal;">Checked in @ </span><%= link_to checkin.location.name, location_path(checkin.location), style: "color: #606470"%></h5>
-          </div>
-          <div class="col-xs-2">
-            <div class="checkin-time">
-             <h6> <%= checkin.created_at.strftime("%I:%M") %></h6>
+             <% begin %>
+             <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+             <% rescue ArgumentError %>
+             <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+             <% end %>
            </div>
          </div>
-         <% end %>
-       </div>
-       <% end %>
-     </div>
-     <div role="tabpanel" class="tab-pane fade" id="all">
-      <% @all_checkins.each do |checkin| %>
-      <div class="row">
-        <%= link_to profile_path(checkin.user) do %>
-        <div class="col-xs-2">
-          <div class="user-profile" style="margin-top: 15px;">
-            <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
-          </div>
-        </div>
-        <div class="col-xs-8" class="no-purple">
+         <div class="col-xs-8" class="no-purple">
           <h5><%= link_to checkin.user.user_name, profile_path(checkin.user), style: "color: #606470" %></h5>
           <h5><span style="font-weight: normal;">Checked in @ </span><%= link_to checkin.location.name, location_path(checkin.location), style: "color: #606470"%></h5>
         </div>
@@ -65,10 +47,36 @@
        <% end %>
      </div>
      <% end %>
-
-
    </div>
+   <div role="tabpanel" class="tab-pane fade" id="all">
+    <% @all_checkins.each do |checkin| %>
+    <div class="row">
+      <%= link_to profile_path(checkin.user) do %>
+      <div class="col-xs-2">
+        <div class="user-profile" style="margin-top: 15px;">
+          <% begin %>
+          <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+          <% rescue ArgumentError %>
+          <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-8" class="no-purple">
+        <h5><%= link_to checkin.user.user_name, profile_path(checkin.user), style: "color: #606470" %></h5>
+        <h5><span style="font-weight: normal;">Checked in @ </span><%= link_to checkin.location.name, location_path(checkin.location), style: "color: #606470"%></h5>
+      </div>
+      <div class="col-xs-2">
+        <div class="checkin-time">
+         <h6> <%= checkin.created_at.strftime("%I:%M") %></h6>
+       </div>
+     </div>
+     <% end %>
+   </div>
+   <% end %>
+
+
  </div>
+</div>
 </div>
 
 
