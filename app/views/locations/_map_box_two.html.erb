@@ -3,5 +3,6 @@
 <li> <i class="fas fa-burn"></i> <%=@location.calculate_average_atmosphere %> </li>
 <li> <i class="far fa-clock"></i> <%=@location.calculate_average_queue %> min </li>
 </ul>
-
 <!-- <#%= link_to 'Details', location_path(@location) %> -->
+<a href="https://www.google.com/maps/dir/?api=1&destination=<%=@location.name%>"><%= @location.address %></a>
+
