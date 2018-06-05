@@ -32,6 +32,10 @@ class CheckinsController < ApplicationController
 
     @checkin_last = CheckIn.where(user: current_user).where("created_at > ?", @checkin_timeframe)
     @checkin = CheckIn.new
+
+    if @checkin_last.first
+      flash.now[:alert] = "You are already checked in at #{@checkin_last.first.location.name}. You can still check in here but be aware that you will loose your old checkin."
+    end
   end
 
   def create

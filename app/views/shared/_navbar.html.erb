@@ -4,13 +4,13 @@
     <%= image_tag "new-logo.jpg", class: "logo-picture" %>
   </div>
     <div class="form-input-wrapper">
-      <%= form_tag root_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search" %>
+      <%= form_tag location_search_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search a club" %>
     </div>
     <% end %>
 </div>
 
-
+<!-- need to get a path that has a param -->
 
 
 
