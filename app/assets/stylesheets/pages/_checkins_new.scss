@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .logo-picture-big {
   height: 180px;
   width: 180px;
@@ -54,7 +59,7 @@
 }
 
 button {
-background-color: white;
-border: none;
-text-decoration: none;
+  background-color: white;
+  border: none;
+  text-decoration: none;
 }
