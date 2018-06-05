@@ -30,7 +30,12 @@
           <li><i class="far fa-clock"></i></li>
           <li id="score"><%= location.calculate_average_queue %></li>
           <li><i class="fas fa-users"></i></li>
-          <li id="score"><%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count %></li>
+          <li id="score">
+            <% if @checkin_friends.nil? %>
+            <p>0</p>
+            <% else %>
+            <%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count %></li>
+            <% end %>
         </ul>
       </div>
     </div>
