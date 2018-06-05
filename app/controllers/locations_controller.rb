@@ -1,10 +1,11 @@
 class LocationsController < ApplicationController
 
 before_action :authenticate_user!
-before_action :find, only: [:show] #gets right location from params[:id]
+# before_action :find, only: [:show] #gets right location from params[:id]
 
 
   def index
+
     @locations = Location.all
 
     @markers = @locations.map do |location|
@@ -28,6 +29,21 @@ before_action :find, only: [:show] #gets right location from params[:id]
   end
 
   def show
+
+    if params[:query].present?
+      @location = Location.where(name: params[:query])[0]
+    else
+      @location = Location.find(params[:id])
+    end
+
+
+
+    if @location.nil?
+      redirect_to locations_path, flash: {notice: "Successfully checked in"}
+      return
+    end
+
+
     @checkin_users = @location.users
     @checkin_friends = @location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)
     @checkin_strangers = @location.users - @checkin_friends - [current_user]
@@ -43,12 +59,16 @@ before_action :find, only: [:show] #gets right location from params[:id]
     @markers << @marker
   end
 
+  def search
+      # # @location = Location.where(name: params[:query])[0] if params[:query].present?
+      # redirect_to locations_path if @location.nil?
+  end
 
   private
 
-  def find
-    @location = Location.find(params[:id])
-  end
+  # def find
+  #   @location = Location.find(params[:id])
+  # end
 
   def friend_count(location)
     location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)

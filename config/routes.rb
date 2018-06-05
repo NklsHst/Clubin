@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/locations/atmosphere', to: 'locations#index_atmosphere', as: :index_atmosphere
   get '/locations/queue', to: 'locations#index_queue', as: :index_queue
   get '/locations/:id', to: 'locations#show', as: :location
+  get '/locations/search', to: 'locations#search', as: :location_search
 
   # Routes for checkin controller
   get '/checkin', to: 'checkins#new', as: :checkins_new
