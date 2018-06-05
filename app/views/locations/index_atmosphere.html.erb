@@ -34,7 +34,7 @@
             <% if @checkin_friends.nil? %>
             <p>0</p>
             <% else %>
-            <%= @checkin_friends %></li>
+            <%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count %></li>
             <% end %>
         </ul>
       </div>

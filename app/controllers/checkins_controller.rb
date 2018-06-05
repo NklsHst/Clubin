@@ -2,7 +2,7 @@ class CheckinsController < ApplicationController
   before_action :set_location, only: [:create]
 
   def index
-    @all_checkins = CheckIn.all
+    @all_checkins = CheckIn.all.where.not(user_id: current_user.id)
     @friends_checkins = []
     @strangers_checkins = []
 
@@ -22,6 +22,9 @@ class CheckinsController < ApplicationController
         @strangers_checkins << check_in
       end
     end
+    @all_checkins.reverse
+    @friends_checkins.reverse
+    @strangers_checkins.reverse
   end
 
   def new
