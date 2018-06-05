@@ -39,7 +39,7 @@ before_action :authenticate_user!
 
 
     if @location.nil?
-      redirect_to locations_path, flash: {notice: "Successfully checked in"}
+      redirect_to redirect_path
       return
     end
 
