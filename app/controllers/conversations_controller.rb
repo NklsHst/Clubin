@@ -3,11 +3,13 @@ class ConversationsController < ApplicationController
 
   def index
     @checkin = CheckIn.where(user: current_user).last
+    @checkin_timeframe = 12.hours.ago
+    @checkin_valid = @checkin.created_at > @checkin_timeframe
     checkins_array = []
     @conversations = []
     @users = []
 
-    checkins_array = CheckIn.where("created_at > ?", 1.days.ago).where(location: @checkin.location)
+    checkins_array = CheckIn.where("created_at > ?", @checkin_timeframe).where(location: @checkin.location)
 
     checkins_array.each do |c|
       unless current_user.id == c.user.id
