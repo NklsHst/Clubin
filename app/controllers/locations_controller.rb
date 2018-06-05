@@ -20,11 +20,11 @@ before_action :find, only: [:show] #gets right location from params[:id]
   end
 
   def index_atmosphere
-    @locations = Location.all.sort_by {|location| location.calculate_average_atmosphere}.reverse.first(10)
+    @locations = Location.all.sort_by {|location| location.calculate_average_atmosphere}.reverse.first(11)
   end
 
   def index_queue
-    @locations = Location.all.sort_by {|location| location.calculate_average_queue}.reverse.first(10)
+    @locations = Location.all.sort_by {|location| location.calculate_average_queue}.reverse.first(11)
   end
 
   def show
