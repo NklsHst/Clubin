@@ -1,1 +1,45 @@
-<h3>Thanks for checking in</h3>
+<div class="page-content-2">
+  <div class="heading-final">
+    <h2>Thanks for checking in @ <%= @checkin.location.name %></h2>
+  </div>
+    <div class="container-2">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="profile-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @checkin.location.photo %>')">
+          </div>
+        </div>
+      </div>
+
+
+  <div class="row">
+    <ul class="list-inline" id="list-details">
+      <li><b>Current rating:    </b></li>
+      <li><i class="fas fa-burn"></i></li>
+      <li id="score"><%= @checkin.location.calculate_average_atmosphere %></li>
+      <li><i class="far fa-clock"></i></li>
+      <li id="score"><%= @checkin.location.calculate_average_queue %></li>
+      <li><i class="fas fa-users"></i></li>
+      <li id="score">2</li>
+    </ul>
+  </div>
+</div>
+
+<div class ="button-container">
+    <div class="row" id="whatever">
+    <div class="col-xs-12">
+      <div class="btn btn-primary further-options">
+        <%= link_to "Start chatting with other visitors", conversations_path %>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="whatever">
+    <div class="col-xs-12">
+      <div class="btn btn-primary further-options">
+        <%= link_to "Join a group chat with your friends", "#" %>
+      </div>
+    </div>
+</div>
+
+
+
+
