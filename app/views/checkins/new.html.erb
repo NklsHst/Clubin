@@ -1,7 +1,4 @@
 
-<% if @checkin_last.first %>
-  <%= flash.alert = "You are already checked in at #{@checkin_last.first.location.name}. You can still check in here but be aware that you will loose your old checkin." %>
-<% end %>
 <div class="container" id="checkin-container">
   <div class="row" style="height: 45vh;">
     <div class="col-xs-10">
