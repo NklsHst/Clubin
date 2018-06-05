@@ -13,7 +13,7 @@ before_action :find, only: [:show] #gets right location from params[:id]
         lat: location.latitude,
         lng: location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
-        # infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
+        infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
     end
     @markers = @markers.compact
@@ -48,6 +48,10 @@ before_action :find, only: [:show] #gets right location from params[:id]
 
   def find
     @location = Location.find(params[:id])
+  end
+
+  def friend_count(location)
+    location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)
   end
 
 end

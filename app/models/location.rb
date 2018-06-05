@@ -7,7 +7,6 @@ class Location < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-
   def calculate_average_atmosphere
     check_ins.pluck(:atmosphere_rating).compact.sum / check_ins.count unless check_ins.length == 0
   end
