@@ -49,16 +49,18 @@ function printLocation(data) {
 
 // submit form including location_id, as well as the browser lat and lng
 function submitButton() {
-  var btn = document.getElementById("checkin")
-  var form = document.getElementById("new_check_in")
+  var btn = document.getElementById("checkin");
+  var form = document.getElementById("new_check_in");
 
-  btn.addEventListener("click", function () {
-    form.submit();
-  });
+  if (btn && form) {
+    btn.addEventListener("click", function () {
+      form.submit();
+    });
+  }
 }
 
 // call all functions
 getLocation()
 submitButton()
 
-export { getLocation, showPosition }
+// export { getLocation, showPosition }
