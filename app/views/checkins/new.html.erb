@@ -1,4 +1,3 @@
-<%= javascript_pack_tag 'getlocation' %>
 
 <% if @checkin_last.first %>
   <%= flash.alert = "You are already checked in at #{@checkin_last.first.location.name}. You can still check in here but be aware that you will loose your old checkin." %>
@@ -35,4 +34,8 @@
 </div>
 
 <!-- <%= link_to "Try again", checkins_new_path(@location) %> -->
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag 'getlocation' %>
+<% end %>
 
