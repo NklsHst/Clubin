@@ -13,8 +13,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <% if @user.picture.nil? %>
+      <div class="profile-picture">
+        <h2>Picture unavailable </h2>
+      </div>
+      <% else %>
       <div class="profile-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.picture %>')">
       </div>
+      <% end %>
     </div>
   </div>
   <div class="row">
