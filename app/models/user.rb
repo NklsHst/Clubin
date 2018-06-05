@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :checkins
   has_many :friendships
 
-  mount_uploader :picture, PhotoUploader
+  mount_uploader :picture, PhotoUploader, :mount_on => :picture
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
