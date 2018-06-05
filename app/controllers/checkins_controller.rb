@@ -28,6 +28,9 @@ class CheckinsController < ApplicationController
   end
 
   def new
+    @checkin_timeframe = 12.hours.ago
+
+    @checkin_last = CheckIn.where(user: current_user).where("created_at > ?", @checkin_timeframe)
     @checkin = CheckIn.new
   end
 
