@@ -1,43 +1,110 @@
-<div class="container">
-  <% if @checkin_valid %>
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <h3>Your existing chats:</h3>
-        <div class=”item”>
-          <% @conversations.each do |conversation| %>
+<div class="navbar-filter nav nav-tabs" role="tablist">
+  <ul class="navbar-filter nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a class="filter-item-1" href="#friends" aria-controls="friends" role="tab" data-toggle="tab">
+        <i class="far fa-comments"></i> Current chats
+      </a>
+    </li>
+    <li role="presentation" class="">
+      <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
+        <i class="far fa-comment"></i> Start a new chat
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="page-content">
+  <div class="container">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="friends">
+        <h2>Current chats</h2>
+        <% if @checkin_valid %>
+          <div class=”item”>
+            <% @conversations.each do |conversation| %>
             <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-              <% if conversation.sender_id == current_user.id %>
-                <% recipient = User.find(conversation.recipient_id) %>
-              <% else %>
-                <% recipient = User.find(conversation.sender_id) %>
-              <% end %>
-              <div>
-                <%= recipient.user_name %> <%= link_to "Message me!", conversation_messages_path(conversation)%>
-              </div>
+            <% if conversation.sender_id == current_user.id %>
+            <% recipient = User.find(conversation.recipient_id) %>
+            <% message = Message.find(conversation.id) %>
+            <% else %>
+            <% recipient = User.find(conversation.sender_id) %>
+            <% message = Message.find(conversation.id) %>
             <% end %>
+
+        <div class="row">
+              <%= link_to profile_path(recipient) do %>
+              <div class="col-xs-2">
+                <div class="user-profile" style="margin-top: 15px;">
+                 <% begin %>
+                 <img src="<%= cl_image_path recipient.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+                 <% rescue ArgumentError %>
+                 <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+                 <% end %>
+               </div>
+             </div>
+             <div class="col-xs-8" class="no-purple">
+              <h5><%= link_to recipient.user_name, conversation_messages_path(conversation), style: "color: #606470" %></h5>
+              <h6><%= link_to message.body[0,20], conversation_messages_path(conversation), style: "color: #606470"%></h6>
+            </div>
+            <div class="col-xs-2">
+              <div class="checkin-time">
+               <h6> <%= conversation.created_at.strftime("%I:%M") %></h6>
+             </div>
+           </div>
+           <% end %>
+         </div>
+         <% end %>
+         <% end %>
+       </div>
+     </div>
+
+
+
+
+
+     <div role="tabpanel" class="tab-pane fade" id="all">
+      <h2>Start a new chat</h2>
+      <div class=”item”>
+        <% @users.each do |user| %>
+        <% if user.id != current_user.id && ## if in same location %>
+        <div class="row">
+
+            <%= link_to profile_path(user) do %>
+          <div class="col-xs-2">
+            <div class="user-profile" style="margin-top: 15px;">
+             <% begin %>
+             <img src="<%= cl_image_path user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+             <% rescue ArgumentError %>
+             <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+             <% end %>
+           </div>
+         </div>
+         <div class="col-xs-6" class="no-purple">
+          <h5><%= link_to user.user_name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post", style: "color: #606470" %></h5>
+        </div>
+        <div class="col-xs-3">
+          <div class="btn btn-primary" id="chat-button">
+           <%= link_to "Chat", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
+         </div>
+       </div>
+       <% end %>
+
+
+
+
+          </div>
+          <% end %>
           <% end %>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <h3>Other Users checked in at <%= @checkin.location.name %></h3>
-        <% @users.each do |user| %>
-          <% if user.id != current_user.id && ## if in same location %>
-            <div class=”item”>
-              <%= user.user_name %> <%= link_to "Message me!", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  <% else %>
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1" style="display: flex; align-items: center; flex-direction: column;">
-        <h2 style="text-align: center;">You are not checked in anywhere. Please check in to chat.</h2>
+      <% else %>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1" style="display: flex; align-items: center; flex-direction: column;">
+          <h2 style="text-align: center;">You are not checked in anywhere. Please check in to chat.</h2>
           <br>
-        <%= link_to "Check in now", checkins_new_path, class: "btn btn-primary" %>
+          <%= link_to "Check in now", checkins_new_path, class: "btn btn-primary" %>
+        </div>
       </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
