@@ -1,0 +1,7 @@
+{
+  "short_name": "Clubin",
+  "name": "Clubin Best App",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

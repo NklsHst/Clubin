@@ -21,11 +21,11 @@ before_action :authenticate_user!
   end
 
   def index_atmosphere
-    @locations = Location.all.sort_by {|location| location.calculate_average_atmosphere}.reverse.first(11)
+    @locations = Location.all.sort_by {|location| location.calculate_average_atmosphere}.reverse
   end
 
   def index_queue
-    @locations = Location.all.sort_by {|location| location.calculate_average_queue}.reverse.first(11)
+    @locations = Location.all.sort_by {|location| location.calculate_average_queue}.reverse
   end
 
   def show
