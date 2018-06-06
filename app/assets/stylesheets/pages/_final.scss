@@ -36,6 +36,14 @@ margin-right: 10px;
 .container-2 ul {
     list-style-type: none;
     font-size: 20px;
-    margin-left: 5px;
+    margin-left: 0px;
     margin-top: 10px;
   }
+
+  .container-2 li {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+.container-2 #score {
+  padding-right: 5px;
+}
