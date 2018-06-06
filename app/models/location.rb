@@ -7,6 +7,13 @@ class Location < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+  include PgSearch
+  pg_search_scope :search_by_name,
+    against: [ :name],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+
   def calculate_average_atmosphere
     (check_ins.pluck(:atmosphere_rating).compact.sum.to_f / check_ins.count.to_f).round(1) unless check_ins.length == 0
   end
