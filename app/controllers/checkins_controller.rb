@@ -67,6 +67,29 @@ class CheckinsController < ApplicationController
 
   def final
     @checkin = CheckIn.find(params[:checkin_id])
+
+    @all_checkins = CheckIn.all.where.not(user_id: current_user.id).where(location_id: params[:id])
+    @friends_checkins = []
+    @strangers_checkins = []
+
+    user_partner_ids = []
+    current_user.friendships.each do |friendship|
+      user_partner_ids << friendship.partner_id
+    end
+
+    @all_checkins.each do |check_in|
+      if user_partner_ids.include? check_in.user_id
+        # use next line instead of the one above for time logic (set the time frame for checkins to 3 hours)
+        # if user_partner_ids.include? check_in.user_id && Time.nom.utc - check_in.created_at < 1080
+        @friends_checkins << check_in
+      else
+        # use next line instead of the one above for time logic (set the time frame for checkins to 3 hours)
+        # elsif  Time.nom.utc - check_in.created_at > 1080
+        @strangers_checkins << check_in
+      end
+    end
+
+
   end
 
   private
