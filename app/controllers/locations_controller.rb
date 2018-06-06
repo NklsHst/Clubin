@@ -48,13 +48,15 @@ before_action :authenticate_user!
     @checkin_friends = @location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id)
     @checkin_strangers = @location.users - @checkin_friends - [current_user]
 
+
     @markers = []
     @marker =
       {
         lat: @location.latitude,
         lng: @location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
-        infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) }
+        infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) },
+        # icon: image_tag('club.png')
       }
     @markers << @marker
   end

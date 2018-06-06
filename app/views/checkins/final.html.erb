@@ -19,7 +19,9 @@
       <li><i class="far fa-clock"></i></li>
       <li id="score"><%= @checkin.location.calculate_average_queue %></li>
       <li><i class="fas fa-users"></i></li>
-      <li id="score">2</li>
+
+
+      <li id="score"><%= @friends_checkins.count %></li>
     </ul>
   </div>
 </div>
