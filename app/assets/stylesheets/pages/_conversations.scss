@@ -1,4 +1,20 @@
+#c-page-content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
 #chat-button {
   margin-top: 13px;
   margin-left: 35px;
+}
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+}
+
+.tab-content {
+  width: auto;
 }

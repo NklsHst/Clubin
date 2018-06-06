@@ -13,24 +13,23 @@
   </ul>
 </div>
 
-<div class="page-content">
+<div class="page-content" id="c-page-content">
   <div class="container">
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="friends">
-        <h2>Current chats</h2>
         <% if @checkin_valid %>
+          <h2>Current chats</h2>
           <div class=”item”>
             <% @conversations.each do |conversation| %>
-            <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-            <% if conversation.sender_id == current_user.id %>
-            <% recipient = User.find(conversation.recipient_id) %>
-            <% message = Message.find(conversation.id) %>
-            <% else %>
-            <% recipient = User.find(conversation.sender_id) %>
-            <% message = Message.find(conversation.id) %>
-            <% end %>
-
-        <div class="row">
+              <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+                <% if conversation.sender_id == current_user.id %>
+                  <% recipient = User.find(conversation.recipient_id) %>
+                  <% message = Message.where(conversation_id: conversation.id).last %>
+                <% else %>
+                  <% recipient = User.find(conversation.sender_id) %>
+                  <% message = Message.where(conversation_id: conversation.id).last %>
+                <% end %>
+              <div class="row">
               <%= link_to profile_path(recipient) do %>
               <div class="col-xs-2">
                 <div class="user-profile" style="margin-top: 15px;">
@@ -56,9 +55,6 @@
          <% end %>
        </div>
      </div>
-
-
-
 
 
      <div role="tabpanel" class="tab-pane fade" id="all">
@@ -88,16 +84,13 @@
        </div>
        <% end %>
 
-
-
-
           </div>
           <% end %>
           <% end %>
         </div>
       </div>
       <% else %>
-      <div class="row">
+       <div class="row">
         <div class="col-xs-10 col-xs-offset-1" style="display: flex; align-items: center; flex-direction: column;">
           <h2 style="text-align: center;">You are not checked in anywhere. Please check in to chat.</h2>
           <br>
