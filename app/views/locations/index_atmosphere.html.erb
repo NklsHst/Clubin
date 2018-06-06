@@ -18,7 +18,7 @@
   <div class="row">
     <%= link_to location_path(location) do %>
     <div class="col-xs-4">
-      <div class="club-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path location.photo%>')">
+      <div class="club-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path location.photo, secure: true%>')">
       </div>
     </div>
     <div class="col-xs-8" class="no-purple">
