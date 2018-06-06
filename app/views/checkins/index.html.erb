@@ -29,7 +29,7 @@
           <div class="col-xs-2">
             <div class="user-profile" style="margin-top: 15px;">
              <% begin %>
-             <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+             <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
              <% rescue ArgumentError %>
              <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
              <% end %>
@@ -55,7 +55,7 @@
       <div class="col-xs-2">
         <div class="user-profile" style="margin-top: 15px;">
           <% begin %>
-          <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+          <img src="<%= cl_image_path checkin.user.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
           <% rescue ArgumentError %>
           <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
           <% end %>
