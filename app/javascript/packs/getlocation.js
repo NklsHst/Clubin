@@ -45,7 +45,8 @@ function printLocation(data) {
     checkin_button.style.setProperty("-webkit-transition", "background-image 5s linear")
     $('#checkin-button').fadeIn("slow");
     checkin_button.disabled = false
-    checkin_button.firstChild.innerHTML = `Tap to check in to <br> <strong>${data.name}</strong> `
+    document.getElementById("checkin-text").innerHTML = "Tap to check in"
+    checkin_button.firstChild.innerHTML = `<strong>${data.name}</strong> `
   }
 }
 

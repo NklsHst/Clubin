@@ -13,9 +13,16 @@
   justify-content: center;
 }
 
+#checkin-text {
+  padding: 10px 0px;
+  margin-bottom: 35px;
+  color: $main-purple;
+  font-weight: stronger;
+}
+
 #checkin-button {
-  height: 40vh;
-  width: 40vh;
+  height: 30vh;
+  width: 30vh;
   border-radius: 50%;
   background-color: white;
 }
