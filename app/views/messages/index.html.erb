@@ -1,39 +1,42 @@
-<div class="navbar-filter nav nav-tabs" role="tablist">
-  <ul class="navbar-filter nav-tabs" role="tablist">
-    <li role="presentation" class="active">
-      <a class="filter-item-1" href="#friends" aria-controls="friends" role="tab" data-toggle="tab">
-        <i class="far fa-comments"></i> Current chats
-      </a>
-    </li>
-    <li role="presentation" class="">
-      <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
-        <i class="far fa-comment"></i> Start a new chat
-      </a>
-    </li>
-  </ul>
+<div class="navbar-filter">
+  <div class="link-back">
+  <%= link_to conversations_path, class: "filter-item-1 filter-link", style: "text-align: center" do %>
+  <i class="fas fa-caret-left fa-2x"></i>
+  <% end %>
+</div>
+<div class="chat-name">
+  <h5> Back to chat overview</h5>
+</div>
 </div>
 
 
 <div class="page-content">
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
       <% if @over_five %>
         <%= link_to "Show Previous", "?m=all", class: "show-prev" %>
       <% end %>
     </div>
-  </div>
+  </div> -->
 
-  <div class="row messages">
-    <div class="col-xs-10 col-xs-offset-1">
         <% @messages.each do |message| %>
+          <div class="row messages">
           <div class="msg-structure">
+            <div class="col-xs-2">
             <%= cl_image_tag message.user.picture, class: "avatar img-circle" if message.user == current_user %>
+            </div>
+            <div class="col-xs-10">
             <% if message.body %>
               <div class="<%= "me" if message.user == current_user && message.body %> message">
                 <% user = User.find(message.user_id) %>
                 <div class="content">
                   <div class="header">
-                    <strong><%= user.user_name %></strong> <%= message.message_time %>
+                    <div class="name">
+                      <strong><%= user.user_name %></strong>
+                    </div>
+                      <div = class="message-time">
+                        <%= message.created_at.strftime("%I:%M") %>
+                      </div>
                   </div>
                   <div class="body">
                     <%= message.body %>
@@ -43,16 +46,17 @@
             <% end %>
              <%= cl_image_tag message.user.picture, class: "avatar img-circle" if message.user != current_user && ( message && user ) != nil %>
           </div>
+        </div>
         <% end %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <%= form_for [@conversation, @message], html: {class: "reply-form form-group"} do |f| %>
+  <div class="form-input-wrapper-1">
+    <div class="col-xs-12">
+      <%= form_for [@conversation, @message], html: {class: "reply-form"} do |f| %>
         <%= f.text_area :body, class: "input-field" %>
         <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-        <%= f.submit "Reply", class: "input-button" %>
+        <%= f.submit "Send", class: "btn btn-primary", id: "input-button"%>
       <% end %>
-  </div>
+    </div>
 </div>
