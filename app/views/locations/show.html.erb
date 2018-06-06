@@ -16,12 +16,17 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="user_banner">
+
           <% @checkin_friends.each do |checkin| %>
+
           <div class="user-profile">
-            <img src="<%= cl_image_path checkin.picture, width: 40, height: 40, crop: :fill %>" class="avatar">
+            <img src=<%= cl_image_path checkin.picture, width: 40, height: 40, crop: :fill %> class="avatar">
             <div class="user-name"><%= checkin.user_name %></div>
           </div>
+
           <% end %>
+          <!-- I think "" in line 23 fucks up the loop, but if removed layout is fucked up, a classic fuck up trade off -->
+
         </div>
       </div>
     </div>
