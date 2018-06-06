@@ -31,7 +31,7 @@ before_action :authenticate_user!
   def show
 
     if params[:query].present?
-      @location = Location.where(name: params[:query])[0]
+      @location = Location.search_by_name(params[:query])[0]
     else
       @location = Location.find(params[:id])
     end
