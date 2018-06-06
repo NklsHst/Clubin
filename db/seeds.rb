@@ -68,7 +68,8 @@ pictures = [
 'https://res.cloudinary.com/dy4yxobpa/image/upload/v1528121868/profile_2.jpg',
 'https://res.cloudinary.com/dy4yxobpa/image/upload/v1528121858/profile_1.jpg',
 'https://res.cloudinary.com/dy4yxobpa/image/upload/v1528275701/28660610_10215553798348300_1701634647123296242_n.jpg',
-'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_850/v1528292036/kai.jpg'
+'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_850/v1528292036/kai.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_850/v1528327451/niklas.jpg'
 ]
 
 user_1 = User.new(
@@ -544,6 +545,17 @@ p user_52
 
 users << user_52
 
+  user_53 = User.new(
+  user_name: "Niklas",
+  email: "niklas@test.de",
+  about_me:"",
+  password: "123456",
+  password_confirmation: "123456")
+user_53.save!
+p user_53
+
+users << user_53
+
 User.all.each do |user|
   user.remote_picture_url = pictures.delete_at(0)
   user.save
@@ -947,7 +959,6 @@ end
 
 
 i = 1
-
 30.times do
 
   friendship = Friendship.new(
@@ -964,12 +975,82 @@ i = 1
   i += 1
 end
 
-friendship = Friendship.new(
+a = 1
+30.times do
+
+  friendship = Friendship.new(
+  user_id: 52,
+  partner_id: a)
+  if friendship.user_id != friendship.partner_id
+    friendship.save!
+  else
+    friendship.destroy!
+  end
+
+  p friendship
+  friendships << friendship
+  a += 1
+end
+
+b = 1
+30.times do
+
+  friendship = Friendship.new(
+  user_id: 53,
+  partner_id: b)
+  if friendship.user_id != friendship.partner_id
+    friendship.save!
+  else
+    friendship.destroy!
+  end
+
+  p friendship
+  friendships << friendship
+  b += 1
+end
+
+1.times do
+friendship_one = Friendship.new(
   user_id: 51,
   partner_id: 52)
+  if friendship_one.user_id != friendship_one.partner_id
+    friendship_one.save!
+  else
+    friendship_one.destroy!
+  end
 
-p friendship
-  friendships << friendship
+  p friendship_one
+  friendships << friendship_one
+
+  friendship_two = Friendship.new(
+  user_id: 51,
+  partner_id: 53)
+  if friendship_two.user_id != friendship_two.partner_id
+    friendship_two.save!
+  else
+    friendship_two.destroy!
+  end
+
+  p friendship_two
+
+  friendships << friendship_two
+
+  friendship_three = Friendship.new(
+  user_id: 52,
+  partner_id: 53)
+  if friendship_three.user_id != friendship_three.partner_id
+    friendship_three.save!
+  else
+    friendship_three.destroy!
+  end
+
+  p friendship_three
+
+  friendships <<  friendship_three
+end
+
+
+
 
 # get rid of redundant friendships
 
