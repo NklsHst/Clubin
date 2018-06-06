@@ -3,7 +3,6 @@
 # The messages model is still missing.
 # For the chackin queue value i set a sample size from 1 to 300 for the case we will calculate in minutes.(Should be changed if we decide otherwise)
 # Friendship migth have a wired patter due to the choosen sample logic.
-
 require 'faker'
 require 'open-uri'
 
@@ -70,10 +69,13 @@ pictures = [
 'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121858/profile_1.jpg'
 ]
 
+clubs = ["Tresor", "AVENUE Berlin", "Berghain", "Prince Charles", "Kremanski", "Neue Odessa Bar", "Schmittz", "Amano Bar", "Sandmann", "Le Wagon Kitchen", "The Unique Bar"]
 
 user_1 = User.new(
     user_name: "James",
     email: "James@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_1.save!
@@ -82,6 +84,8 @@ user_1 = User.new(
   user_2 = User.new(
     user_name: "Mary",
     email: "Mary@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_2.save!
@@ -90,6 +94,8 @@ user_1 = User.new(
   user_3 = User.new(
     user_name: "John",
     email: "John@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_3.save!
@@ -98,6 +104,8 @@ user_1 = User.new(
   user_4 = User.new(
     user_name: "Robert",
     email: "Robert@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_4.save!
@@ -106,6 +114,8 @@ user_1 = User.new(
   user_5 = User.new(
     user_name: "Michael",
     email: "Michael@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_5.save!
@@ -114,6 +124,8 @@ user_1 = User.new(
   user_6 = User.new(
     user_name: "Patricia",
     email: "Patricia@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_6.save!
@@ -122,6 +134,8 @@ user_1 = User.new(
   user_7 = User.new(
     user_name: "William",
     email: "William@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_7.save!
@@ -130,6 +144,8 @@ user_1 = User.new(
   user_8 = User.new(
     user_name: "Linda",
     email: "Linda@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_8.save!
@@ -138,6 +154,8 @@ user_1 = User.new(
   user_9 = User.new(
     user_name: "David",
     email: "David@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_9.save!
@@ -146,6 +164,8 @@ user_1 = User.new(
   user_10 = User.new(
     user_name: "Barbara",
     email: "Barbara@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_10.save!
@@ -154,6 +174,8 @@ user_1 = User.new(
   user_11 = User.new(
     user_name: "Richard",
     email: "Richard@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_11.save!
@@ -162,6 +184,8 @@ user_1 = User.new(
   user_12 = User.new(
     user_name: "Charles",
     email: "Charles@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_12.save!
@@ -170,6 +194,8 @@ user_1 = User.new(
   user_13 = User.new(
     user_name: "Elizabeth",
     email: "Elizabeth@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_13.save!
@@ -178,6 +204,8 @@ user_1 = User.new(
   user_14 = User.new(
     user_name: "Jennifer",
     email: "Jennifer@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_14.save!
@@ -186,6 +214,8 @@ user_1 = User.new(
   user_15 = User.new(
     user_name: "Joseph",
     email: "Joseph@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_15.save!
@@ -194,6 +224,8 @@ user_1 = User.new(
   user_16 = User.new(
     user_name: "Maria",
     email: "Maria@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_16.save!
@@ -202,6 +234,8 @@ user_1 = User.new(
   user_17 = User.new(
     user_name: "Thomas",
     email: "Thomas@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_17.save!
@@ -210,6 +244,8 @@ user_1 = User.new(
   user_18 = User.new(
     user_name: "Susan",
     email: "Susan@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_18.save!
@@ -218,6 +254,8 @@ user_1 = User.new(
   user_19 = User.new(
     user_name: "Margaret",
     email: "Margaret@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_19.save!
@@ -226,6 +264,8 @@ user_1 = User.new(
   user_20 = User.new(
     user_name: "Dorothy",
     email: "Dorothy@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_20.save!
@@ -234,6 +274,8 @@ user_1 = User.new(
   user_21 = User.new(
     user_name: "Christopher",
     email: "Christopher@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_21.save!
@@ -242,6 +284,8 @@ user_1 = User.new(
   user_22 = User.new(
     user_name: "Lisa",
     email: "Lisa@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_22.save!
@@ -250,6 +294,8 @@ user_1 = User.new(
   user_23 = User.new(
     user_name: "Daniel",
     email: "Daniel@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_23.save!
@@ -258,6 +304,8 @@ user_1 = User.new(
   user_24 = User.new(
     user_name: "Paul",
     email: "Paul@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_24.save!
@@ -266,6 +314,8 @@ user_1 = User.new(
   user_25 = User.new(
     user_name: "Mark",
     email: "Mark@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_25.save!
@@ -274,6 +324,8 @@ user_1 = User.new(
   user_26 = User.new(
     user_name: "Nancy",
     email: "Nancy@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_26.save!
@@ -282,6 +334,8 @@ user_1 = User.new(
   user_27 = User.new(
     user_name: "Donald",
     email: "Donald@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_27.save!
@@ -290,6 +344,8 @@ user_1 = User.new(
   user_28 = User.new(
     user_name: "George",
     email: "George@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_28.save!
@@ -298,6 +354,8 @@ user_1 = User.new(
   user_29 = User.new(
     user_name: "Kenneth",
     email: "Kenneth@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_29.save!
@@ -306,6 +364,8 @@ user_1 = User.new(
   user_30 = User.new(
     user_name: "Karen",
     email: "Karen@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_30.save!
@@ -314,6 +374,8 @@ user_1 = User.new(
   user_31 = User.new(
     user_name: "Steven",
     email: "Steven@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_31.save!
@@ -322,6 +384,8 @@ user_1 = User.new(
   user_32 = User.new(
     user_name: "Edward",
     email: "Edward@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_32.save!
@@ -330,6 +394,8 @@ user_1 = User.new(
   user_33 = User.new(
     user_name: "Brian",
     email: "Brian@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_33.save!
@@ -338,6 +404,8 @@ user_1 = User.new(
   user_34 = User.new(
     user_name: "Betty",
     email: "Betty@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_34.save!
@@ -346,6 +414,8 @@ user_1 = User.new(
   user_35 = User.new(
     user_name: "Helen",
     email: "Helen@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_35.save!
@@ -354,6 +424,8 @@ user_1 = User.new(
   user_36 = User.new(
     user_name: "Ronald",
     email: "Ronald@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_36.save!
@@ -362,6 +434,8 @@ user_1 = User.new(
   user_37 = User.new(
     user_name: "Sandra",
     email: "Sandra@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_37.save!
@@ -370,6 +444,8 @@ user_1 = User.new(
   user_38 = User.new(
     user_name: "Donna",
     email: "Donna@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_38.save!
@@ -378,6 +454,8 @@ user_1 = User.new(
   user_39 = User.new(
     user_name: "Anthony",
     email: "Anthony@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_39.save!
@@ -386,6 +464,8 @@ user_1 = User.new(
   user_40 = User.new(
     user_name: "Carol",
     email: "Carol@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_40.save!
@@ -394,6 +474,8 @@ user_1 = User.new(
   user_41 = User.new(
     user_name: "Kevin",
     email: "Kevin@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_41.save!
@@ -402,6 +484,8 @@ user_1 = User.new(
   user_42 = User.new(
     user_name: "Jason",
     email: "Jason@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_42.save!
@@ -410,6 +494,8 @@ user_1 = User.new(
   user_43 = User.new(
     user_name: "Matthew",
     email: "Matthew@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_43.save!
@@ -418,6 +504,8 @@ user_1 = User.new(
   user_44 = User.new(
     user_name: "Gary",
     email: "Gary@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_44.save!
@@ -426,6 +514,8 @@ user_1 = User.new(
   user_45 = User.new(
     user_name: "Ruth",
     email: "Ruth@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_45.save!
@@ -434,6 +524,8 @@ user_1 = User.new(
   user_46 = User.new(
     user_name: "Timothy",
     email: "Timothy@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_46.save!
@@ -442,6 +534,8 @@ user_1 = User.new(
   user_47 = User.new(
     user_name: "Sharon",
     email: "Sharon@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_47.save!
@@ -450,6 +544,8 @@ user_1 = User.new(
   user_48 = User.new(
     user_name: "Jose",
     email: "Jose@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_48.save!
@@ -458,6 +554,8 @@ user_1 = User.new(
   user_49 = User.new(
     user_name: "Michelle",
     email: "Michelle@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_49.save!
@@ -466,6 +564,8 @@ user_1 = User.new(
   user_50 = User.new(
     user_name: "Laura",
     email: "Laura@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_50.save!
@@ -482,12 +582,29 @@ end
 user_51 = User.new(
     user_name: "Sarah",
     email: "sarah@test.de",
+    about_me:"",
+    favourite_club: clubs.sample(3),
     password: "123456",
     password_confirmation: "123456")
   user_51.save!
   p user_51
 
   users << user_51
+
+
+user_52 = User.new(
+  user_name: "Niklas",
+  email: "niklas@test.de",
+  about_me:"",
+  favourite_club: clubs.sample(3),
+  password: "123456",
+  password_confirmation: "123456")
+user_52.save!
+p user_52
+
+users << user_52
+
+
 
 photos = [
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527172370/sfjvkicspqt9qavou1yk.jpg',
@@ -505,8 +622,7 @@ photos = [
 
 location = Location.create!([{
   name: "Tresor",
-  description: "Auferstanden in Ruinen: Nach zweijähriger Pause hat der legendäre Tresor in einem ehemaligen Heizkraftwerk eine neue Heimat gefunden.
-  Entstanden ist ein spektakulärer Club-Tempel: Der so genannte „Batterieraum“ ist würdiger Nachfolger des Globus, die „+4 Bar“ bietet einen atemberaubenden Blick in die Kraftwerksruine und in den Tresor Keller gelangt man durch einen 30 Meter langen Tunnel.",
+  description: "Tresor is the biggest and most respected Techno club in Berlin. It's history began basically together with the creation of the city’s clubbing scene, right after Germany was unified. They started as a record label called Interfish at Ufo, the original center of Berlin house and techno. After its closure, the Tresor crew thought it would be a good idea to establish their own club.",
   address: "Köpenicker Str. 70, 10179 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -514,8 +630,7 @@ location = Location.create!([{
   },
   {
   name: "AVENUE Berlin",
-  description: "Vom russischen Spezialitäten-Restaurant zu einem der angesagtesten Clubs der Hauptstadt – fünfzig Jahre komprimierte Berliner Geschichte. Das Café Moskau wurde 1959 von den Architekten Josef Kaiser und Horst Bauer als eines von sieben Nationalitätenrestaurants im Ostteil Berlins geplant und von 1961 bis 1964 in unmittelbarer Nähe zum Alexanderplatz errichtet. Nach längerem Leerstand entdeckte um die Jahrtausendwende die junge Berliner Partyszene das Objekt wieder, und stellte somit die Weichen für die zeitgemäße Nutzung dieser aussergewöhnlichen Location im Herzen Berlins.
-  Als integrativer Bestandteil des denkmalgeschützten Café Moskau, eröffnete im Jahr 2013 der Club AVENUE seine Pforten. Konzipiert und umgebaut von dem international renommierten Architekten-Studio karhard (unter anderem bekannt für das Design namhafter Clubs wie das „Pacha“ in München oder die „Panorama Bar“ im Berliner Berghain), zählt das AVENUE heute mit seinem Mix aus schlichter Eleganz, zeitlosen Designelementen und einer wohl dosierten Portion Understatement zu den Top-Clubs der Hauptstadt.",
+  description: "From the Russian specialty restaurant to one of the hippest clubs in the capital - fifty years of condensed Berlin history. The Café Moskau was designed in 1959 by the architects Josef Kaiser and Horst Bauer as one of seven nationality restaurants in the eastern part of Berlin and was built from 1961 to 1964 in the immediate vicinity of the Alexanderplatz. After a long period of vacancy around the turn of the millennium, the young Berlin party scene rediscovered the object, thus setting the course for the contemporary use of this extraordinary location in the heart of Berlin.",
   address: "Karl-Marx-Allee 34, 10178 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -523,7 +638,7 @@ location = Location.create!([{
   },
   {
   name: "Berghain",
-  description: "Das riesige Gebäude ist ein inzwischen legendärer Anziehungspunkt für feierwütige Gäste. Wer trotz der harten Türpolitik rein darf, kann von Samstagabend bis Montagmorgen verweilen, denn so lange hat der vierstöckige Club geöffnet.",
+  description: "Berghain is the most well-known club in Berlin - and also one of the worldwide most famous clubs. It’s the church of Techno with the best sound system you can get. So be prepared to dance for hours and listen to top quality music.",
   address: "Am Wriezener Bahnhof, 10243 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -531,7 +646,7 @@ location = Location.create!([{
   },
   {
   name: "Prince Charles",
-  description: "Neben den typischen Clubnächten finden sich auch Lesungen, Salonabende und andere kulturelle Veranstaltungen im Veranstaltungskalender des Clubs. Der Blickfang im Innern ist sicherlich die Bar, die im ehemaligen Schwimmbad steht. Ja, richtig gehört! Egal, ob man an der Bar steht oder sitzt, man blickt immer zum Barkeeper herunter. Und auch sonst setzt sich das Extravagante im Club fort. Beim Hauscocktail, der sich „Prince Charles“ nennt, heisst es zurücklehnen und den feinen Elektro-Klängen lauschen.",
+  description: "In addition to the typical club nights, there are also readings, salon evenings and other cultural events in the calendar of events of the club. The eye-catcher inside is certainly the bar, which stands in the former swimming pool. Yes, that's right! No matter if you stand or sit at the bar, you always look down to the bartender. And otherwise, the extravagant continues in the club. The home cocktail, which is called Prince Charles, means to sit back and listen to the fine electric sounds.",
   address: "Prinzenstraße 85f, 10969 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -539,7 +654,7 @@ location = Location.create!([{
   },
   {
   name: "Kremanski",
-  description: "Kleine Auszeit gefällig? Willkommen im KREMANSKI, direkt am Kotti! Von früh bis spät erwartet Euch im Kremanski ein breites, dennoch besonderes Angebot: Frühstück mit Barista-Kaffee, kreativer Mittagstisch, hausgemachter Kuchen bis hin zum lokal gebrauten Bier oder Cocktail am Abend. Im Sommer gibt´s auch selbstgemachtes Eis. Viele vegane Optionen. Dazu ausgesuchter Sound, je nach Stimmung gefühlvoll, urban-lässig oder tanzbar, manchmal auch live.",
+  description: "Take a break? Welcome to KREMANSKI, right on Kotti! From early till late Kremanski awaits you with a wide, yet special offer: breakfast with Barista coffee, creative lunch, homemade cake to locally brewed beer or cocktail in the evening. In the summer there's also homemade ice cream. Many vegan options. In addition, selected tunes, depending on the mood soulful, urban-casual or danceable, sometimes live.",
   address: "Adalbertstraße 96, 10999 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -547,7 +662,8 @@ location = Location.create!([{
   },
   {
   name: "Neue Odessa Bar",
-  description: "Früher gemütliche Kiezkneipe, heute Treffpunkt für Leute aus Mode und Kunst – die Neue Odessa Bar hat sich um 180 Grad gedreht. Seit der Neueröffnung gibt es Türsteher, eine neue schicke Einrichtung und täglich legen DJs auf. Der Geschäftsführer empfiehlt den Moscow Mule mit Wodka, Ginger Beer, Limettensaft und Gurke",
+  description: "
+Once a cozy neighborhood pub, today a meeting place for people of fashion and art - the New Odessa Bar has turned 180 degrees. Since the reopening there are bouncers, a new chic decor and daily DJs. The managing director recommends the Moscow Mule with vodka, ginger beer, lime juice and cucumber",
   address: "Torstraße 89, 10119 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -555,7 +671,7 @@ location = Location.create!([{
   },
   {
   name: "Schmittz",
-  description: "In der Torstraße ist das Schmittz für Fußballfans längst eine feste Adresse: Jedes Bundesliga- und Champions-League-Spiel wird übertragen, dann ist allerdings recht frühes Erscheinen angesagt. Wer auch montags nicht ohne die beliebte Sportart kann, sollte ab 20 Uhr vorbeischauen, zum Kickerturnier, an dem man auch sehr gern alleine teilnehmen kann. Die Partner werden ausgelost, und für den Sieger gibt es einen Pokal. Wem das nicht reicht, der vergnügt sich mit Tischtennis und Dart.",
+  description: "In the Torstraße, the Schmittz has long been a fixture for football fans: every Bundesliga and Champions League match is broadcast, but then it is announced quite early appearance. Those who are not able to do without the popular sport on Mondays should stop by at 8 pm for the kicker tournament, where they are also welcome to participate alone. The partners are drawn and there is a trophy for the winner. If that's not enough for you, you'll enjoy table tennis and darts.",
   address: "Gormannstraße 19, 10119 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -563,7 +679,7 @@ location = Location.create!([{
   },
   {
   name: "Amano Bar",
-  description: "Mit Blick über die Dächer Berlins kann man seinen Cocktail schlürfen und sich in der Ruhe einfach entspannen. Der perfekte Ort, mit Freunden bei einem Drink in der Sonne zu quatschen und dann später den Sonnenuntergang zu genießen.",
+  description: "Overlooking the rooftops of Berlin, you can sip your cocktail and relax in the peace and quiet. The perfect place to chat with friends over a drink in the sun and then enjoy the sunset later.",
   address: "Auguststraße 43, 10119 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -571,7 +687,7 @@ location = Location.create!([{
   },
   {
   name: "Sandmann",
-  description: "Traditionsadresse auf der Neuköllner Reuterstraße. Im Juni 2014 hat der Sandmann seinen 33. Geburtstag gefeiert. Als Musikcafé und Kiezkneipe ist die Location im Neuköllner Nachtleben fest verwurzelt.",
+  description: "Traditional address on the Neuköllner Reuterstraße. In June 2014 Sandman celebrated his 33rd birthday. As a music café and neighborhood pub, the location in Neukölln's nightlife is firmly rooted.",
   address: "Reuterstraße 7, 12053 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -587,7 +703,7 @@ location = Location.create!([{
   },
   {
   name: "The Unique Bar",
-  description: "Die 200 verschiedene Variationen der „Liquid Kitchen“-Cocktails auf der Getränkekarte lassen einem die Entscheidung nicht leicht fallen. Dabei handelt es sich um Mixgetränke, bei denen Zutaten verwendet werden, die normalerweise in den Suppentopf kommen - rosa Pfeffer, Rosmarin oder Paprika. Jeden Monat wird vom Barchef ein Monatscocktail kreiert, wie zum Beispiel der Kentucky Gum - eine kreative Version des bekannten Mint Julep.",
+  description: "The 200 different variations of the Liquid Kitchen cocktails on the drinks menu will not make your decision easy. These are mixed drinks that use ingredients normally found in the soup pot - pink pepper, rosemary or paprika. Each month, the bartender creates a monthly cocktail, such as the Kentucky Gum - a creative version of the well-known Mint Julep.",
   address: "Sheraton Berlin Grand Hotel Esplanade, Lützowufer 15, 10785 Berlin",
   music: ['Techno', 'House', 'Hip-Hop', 'Charts'].sample,
   price_rating: (1..5).to_a.sample,
@@ -623,7 +739,7 @@ u = 1
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (1),
     user_id: u)
   check_in.save!
 
@@ -637,7 +753,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (2),
     user_id: u)
   check_in.save!
 
@@ -649,9 +765,9 @@ end
 #3 Berghain
 6.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    atmosphere_rating: (7..10).to_a.sample,
+    queue_rating: (8..10).to_a.sample,
+    location_id: (3),
     user_id: u)
   check_in.save!
 
@@ -665,7 +781,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (4),
     user_id: u)
   check_in.save!
 
@@ -679,7 +795,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (5),
     user_id: u)
   check_in.save!
 
@@ -693,7 +809,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (6),
     user_id: u)
   check_in.save!
 
@@ -706,8 +822,8 @@ end
 1.times do
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    queue_rating: (1..3).to_a.sample,
+    location_id: (7),
     user_id: u)
   check_in.save!
 
@@ -719,9 +835,9 @@ end
 #8 Amano Bar
 3.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    atmosphere_rating: (1..6).to_a.sample,
+    queue_rating: (1..4).to_a.sample,
+    location_id: (8),
     user_id: u)
   check_in.save!
 
@@ -735,7 +851,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (9),
     user_id: u)
   check_in.save!
 
@@ -747,9 +863,9 @@ end
 #10 Le Wagon
 12.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    atmosphere_rating: (9..10).to_a.sample,
+    queue_rating: (1..2).to_a.sample,
+    location_id: (10),
     user_id: u)
   check_in.save!
 
@@ -763,7 +879,7 @@ end
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
-    location_id: (1..11).to_a.sample,
+    location_id: (11),
     user_id: u)
   check_in.save!
 
@@ -771,12 +887,6 @@ end
   check_ins << check_in
   u += 1
 end
-
-
-
-
-
-
 
 
 i = 1
