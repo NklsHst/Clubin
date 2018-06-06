@@ -42,7 +42,10 @@
              </div>
              <div class="col-xs-8" class="no-purple">
               <h5><%= link_to recipient.user_name, conversation_messages_path(conversation), style: "color: #606470" %></h5>
-              <h6><%= link_to message.body[0,20], conversation_messages_path(conversation), style: "color: #606470"%></h6>
+              <%=  %>
+              <% if message != nil %>
+                <h6><%= link_to message.body[0,20], conversation_messages_path(conversation), style: "color: #606470"%></h6>
+              <% end %>
             </div>
             <div class="col-xs-2">
               <div class="checkin-time">
