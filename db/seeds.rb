@@ -4,8 +4,6 @@
 # For the chackin queue value i set a sample size from 1 to 300 for the case we will calculate in minutes.(Should be changed if we decide otherwise)
 # Friendship migth have a wired patter due to the choosen sample logic.
 
-
-
 require 'faker'
 require 'open-uri'
 
@@ -72,23 +70,424 @@ pictures = [
 'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121858/profile_1.jpg'
 ]
 
-50.times do
-  user = User.new(
-    user_name: Faker::Name.first_name,
-    email: Faker::Internet.email,
-    password: "yooooooooo",
-    password_confirmation: "yooooooooo")
-  user.save!
-  p user
-end
 
-  User.all.each do |user|
+user_1 = User.new(
+    user_name: "James",
+    email: "James@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_1.save!
+  p user_1
+
+  user_2 = User.new(
+    user_name: "Mary",
+    email: "Mary@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_2.save!
+  p user_2
+
+  user_3 = User.new(
+    user_name: "John",
+    email: "John@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_3.save!
+  p user_3
+
+  user_4 = User.new(
+    user_name: "Robert",
+    email: "Robert@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_4.save!
+  p user_4
+
+  user_5 = User.new(
+    user_name: "Michael",
+    email: "Michael@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_5.save!
+  p user_5
+
+  user_6 = User.new(
+    user_name: "Patricia",
+    email: "Patricia@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_6.save!
+  p user_6
+
+  user_7 = User.new(
+    user_name: "William",
+    email: "William@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_7.save!
+  p user_7
+
+  user_8 = User.new(
+    user_name: "Linda",
+    email: "Linda@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_8.save!
+  p user_8
+
+  user_9 = User.new(
+    user_name: "David",
+    email: "David@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_9.save!
+  p user_9
+
+  user_10 = User.new(
+    user_name: "Barbara",
+    email: "Barbara@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_10.save!
+  p user_10
+
+  user_11 = User.new(
+    user_name: "Richard",
+    email: "Richard@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_11.save!
+  p user_11
+
+  user_12 = User.new(
+    user_name: "Charles",
+    email: "Charles@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_12.save!
+  p user_12
+
+  user_13 = User.new(
+    user_name: "Elizabeth",
+    email: "Elizabeth@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_13.save!
+  p user_13
+
+  user_14 = User.new(
+    user_name: "Jennifer",
+    email: "Jennifer@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_14.save!
+  p user_14
+
+  user_15 = User.new(
+    user_name: "Joseph",
+    email: "Joseph@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_15.save!
+  p user_15
+
+  user_16 = User.new(
+    user_name: "Maria",
+    email: "Maria@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_16.save!
+  p user_16
+
+  user_17 = User.new(
+    user_name: "Thomas",
+    email: "Thomas@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_17.save!
+  p user_17
+
+  user_18 = User.new(
+    user_name: "Susan",
+    email: "Susan@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_18.save!
+  p user_18
+
+  user_19 = User.new(
+    user_name: "Margaret",
+    email: "Margaret@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_19.save!
+  p user_19
+
+  user_20 = User.new(
+    user_name: "Dorothy",
+    email: "Dorothy@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_20.save!
+  p user_20
+
+  user_21 = User.new(
+    user_name: "Christopher",
+    email: "Christopher@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_21.save!
+  p user_21
+
+  user_22 = User.new(
+    user_name: "Lisa",
+    email: "Lisa@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_22.save!
+  p user_22
+
+  user_23 = User.new(
+    user_name: "Daniel",
+    email: "Daniel@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_23.save!
+  p user_23
+
+  user_24 = User.new(
+    user_name: "Paul",
+    email: "Paul@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_24.save!
+  p user_24
+
+  user_25 = User.new(
+    user_name: "Mark",
+    email: "Mark@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_25.save!
+  p user_25
+
+  user_26 = User.new(
+    user_name: "Nancy",
+    email: "Nancy@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_26.save!
+  p user_26
+
+  user_27 = User.new(
+    user_name: "Donald",
+    email: "Donald@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_27.save!
+  p user_27
+
+  user_28 = User.new(
+    user_name: "George",
+    email: "George@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_28.save!
+  p user_28
+
+  user_29 = User.new(
+    user_name: "Kenneth",
+    email: "Kenneth@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_29.save!
+  p user_29
+
+  user_30 = User.new(
+    user_name: "Karen",
+    email: "Karen@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_30.save!
+  p user_30
+
+  user_31 = User.new(
+    user_name: "Steven",
+    email: "Steven@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_31.save!
+  p user_31
+
+  user_32 = User.new(
+    user_name: "Edward",
+    email: "Edward@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_32.save!
+  p user_32
+
+  user_33 = User.new(
+    user_name: "Brian",
+    email: "Brian@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_33.save!
+  p user_33
+
+  user_34 = User.new(
+    user_name: "Betty",
+    email: "Betty@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_34.save!
+  p user_34
+
+  user_35 = User.new(
+    user_name: "Helen",
+    email: "Helen@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_35.save!
+  p user_35
+
+  user_36 = User.new(
+    user_name: "Ronald",
+    email: "Ronald@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_36.save!
+  p user_36
+
+  user_37 = User.new(
+    user_name: "Sandra",
+    email: "Sandra@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_37.save!
+  p user_37
+
+  user_38 = User.new(
+    user_name: "Donna",
+    email: "Donna@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_38.save!
+  p user_38
+
+  user_39 = User.new(
+    user_name: "Anthony",
+    email: "Anthony@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_39.save!
+  p user_39
+
+  user_40 = User.new(
+    user_name: "Carol",
+    email: "Carol@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_40.save!
+  p user_40
+
+  user_41 = User.new(
+    user_name: "Kevin",
+    email: "Kevin@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_41.save!
+  p user_41
+
+  user_42 = User.new(
+    user_name: "Jason",
+    email: "Jason@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_42.save!
+  p user_42
+
+  user_43 = User.new(
+    user_name: "Matthew",
+    email: "Matthew@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_43.save!
+  p user_43
+
+  user_44 = User.new(
+    user_name: "Gary",
+    email: "Gary@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_44.save!
+  p user_44
+
+  user_45 = User.new(
+    user_name: "Ruth",
+    email: "Ruth@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_45.save!
+  p user_45
+
+  user_46 = User.new(
+    user_name: "Timothy",
+    email: "Timothy@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_46.save!
+  p user_46
+
+  user_47 = User.new(
+    user_name: "Sharon",
+    email: "Sharon@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_47.save!
+  p user_47
+
+  user_48 = User.new(
+    user_name: "Jose",
+    email: "Jose@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_48.save!
+  p user_48
+
+  user_49 = User.new(
+    user_name: "Michelle",
+    email: "Michelle@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_49.save!
+  p user_49
+
+  user_50 = User.new(
+    user_name: "Laura",
+    email: "Laura@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_50.save!
+  p user_50
+
+User.all.each do |user|
   user.remote_picture_url = pictures.delete_at(0)
   user.save
   p user
 
   users << user
 end
+
+user_51 = User.new(
+    user_name: "Sarah",
+    email: "sarah@test.de",
+    password: "123456",
+    password_confirmation: "123456")
+  user_51.save!
+  p user_51
+
+  users << user_51
 
 photos = [
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527172370/sfjvkicspqt9qavou1yk.jpg',
@@ -205,26 +604,188 @@ Location.all.each do |location|
   locations << location
 end
 
-# example_user_ids = (1..50).to_a
-# i = 1
-50.times do
+
+# 50.times do
+#   check_in = CheckIn.new(
+#     atmosphere_rating: (1..10).to_a.sample,
+#     queue_rating: (1..10).to_a.sample,
+#     location_id: (1..11).to_a.sample,
+#     user_id: users.sample.id)
+#   check_in.save!
+
+#   p check_in
+#   check_ins << check_in
+# end
+
+#1 Tresor
+u = 1
+3.times do
   check_in = CheckIn.new(
     atmosphere_rating: (1..10).to_a.sample,
     queue_rating: (1..10).to_a.sample,
     location_id: (1..11).to_a.sample,
-    user_id: users.sample.id)
+    user_id: u)
   check_in.save!
-
-  # i += 1
 
   p check_in
   check_ins << check_in
+  u += 1
 end
 
-25.times do
+#2 Avenue
+5.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#3 Berghain
+6.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#4 Prince Charles
+2.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#5 Kremanski
+4.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#6 Neue Odessa Bar
+3.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#7 Schmitz
+1.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#8 Amano Bar
+3.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#9 Sandmann
+3.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#10 Le Wagon
+12.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+#11 Unique Bar
+8.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (1..10).to_a.sample,
+    queue_rating: (1..10).to_a.sample,
+    location_id: (1..11).to_a.sample,
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
+
+
+
+
+
+
+
+i = 1
+
+30.times do
+
   friendship = Friendship.new(
-  user_id: users.sample.id,
-  partner_id: users.sample.id)
+  user_id: 51,
+  partner_id: i)
   if friendship.user_id != friendship.partner_id
     friendship.save!
   else
@@ -233,9 +794,10 @@ end
 
   p friendship
   friendships << friendship
+  i += 1
 end
 
-
+# get rid of redundant friendships
 
 
 
