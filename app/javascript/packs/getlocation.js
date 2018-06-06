@@ -30,17 +30,20 @@ function printLocation(data) {
   var checkin_button = document.getElementById("checkin-button")
 
   if (data[0] === "Not close to any clubs") {
-    checkin_button.classList.remove("loading")
-    checkin_button.classList.add("fail")
+    checkin_button.classList.remove("loading-state")
+    checkin_button.classList.add("fail-state")
     checkin_button.innerHTML = `${data}<br><p>You need to be less than 300m away to check in.</p>`;
     checkin_button.insertAdjacentHTML("afterend", `<a href="/checkin" class="btn btn-primary">Try again</a></div>`)
 
   } else {
     document.getElementById("check_in_location_id").value = data.id
-    checkin_button.classList.remove("loading")
-    checkin_button.classList.add("active")
+    checkin_button.classList.remove("loading-state")
+    checkin_button.classList.add("active-state")
     console.log(data.photo.url)
+    $('#checkin-button').hide();
     checkin_button.style.backgroundImage =  `radial-gradient(ellipse at center, rgba(195,56,255,0.1) 0%, rgba(79,79,79,0.6) 100%), url(${data.photo.url})`
+    checkin_button.style.setProperty("-webkit-transition", "background-image 5s linear")
+    $('#checkin-button').fadeIn("slow");
     checkin_button.disabled = false
     checkin_button.firstChild.innerHTML = `Tap to check in to <br> <strong>${data.name}</strong> `
   }

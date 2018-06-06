@@ -21,7 +21,7 @@
 }
 
 
-.loading {
+.loading-state {
   opacity: 0.3;
   cursor: pointer;
   box-shadow: 0 0 0 rgba(195,56,255, 0.4);
@@ -56,14 +56,14 @@
 }
 
 
-.active {
+.active-state {
   opacity: 0.9;
   border: 1px solid $main-purple;
   color: white;
   animation: pulse-second 3s normal;
 }
 
-.active::before {
+.active-state::before {
   animation: 3s ease 0s normal forwards 1 fadein;
   animation-iteration-count: infinite;
 }
@@ -103,7 +103,7 @@
 
 
 
-.fail {
+.fail-state {
   color: red;
 }
 
