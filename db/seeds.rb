@@ -67,7 +67,8 @@ pictures = [
 'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121880/profile_3.jpg',
 'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121868/profile_2.jpg',
 'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528121858/profile_1.jpg',
-'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528275701/28660610_10215553798348300_1701634647123296242_n.jpg'
+'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528275701/28660610_10215553798348300_1701634647123296242_n.jpg',
+'http://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_850/v1528292036/kai.jpg'
 ]
 
 user_1 = User.new(
@@ -532,17 +533,9 @@ user_1 = User.new(
 
   users << user_51
 
-User.all.each do |user|
-  user.remote_picture_url = pictures.delete_at(0)
-  user.save
-  p user
-
-  users << user
-end
-
-user_52 = User.new(
-  user_name: "Niklas",
-  email: "niklas@test.de",
+  user_52 = User.new(
+  user_name: "Kai",
+  email: "kai@test.de",
   about_me:"",
   password: "123456",
   password_confirmation: "123456")
@@ -551,7 +544,13 @@ p user_52
 
 users << user_52
 
+User.all.each do |user|
+  user.remote_picture_url = pictures.delete_at(0)
+  user.save
+  p user
 
+  users << user
+end
 
 photos = [
   'http://res.cloudinary.com/dy4yxobpa/image/upload/v1527172370/sfjvkicspqt9qavou1yk.jpg',
@@ -964,6 +963,13 @@ i = 1
   friendships << friendship
   i += 1
 end
+
+friendship = Friendship.new(
+  user_id: 51,
+  partner_id: 52)
+
+p friendship
+  friendships << friendship
 
 # get rid of redundant friendships
 
