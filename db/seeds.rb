@@ -587,120 +587,120 @@ location = Location.create!([{
   description: "Tresor is the biggest and most respected Techno club in Berlin. It's history began basically together with the creation of the city’s clubbing scene, right after Germany was unified. They started as a record label called Interfish at Ufo, the original center of Berlin house and techno. After its closure, the Tresor crew thought it would be a good idea to establish their own club.",
   address: "Köpenicker Str. 70, 10179 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "AVENUE Berlin",
   description: "From the Russian specialty restaurant to one of the hippest clubs in the capital - fifty years of condensed Berlin history. The Café Moskau was designed in 1959 by the architects Josef Kaiser and Horst Bauer as one of seven nationality restaurants in the eastern part of Berlin and was built from 1961 to 1964 in the immediate vicinity of the Alexanderplatz. After a long period of vacancy around the turn of the millennium, the young Berlin party scene rediscovered the object, thus setting the course for the contemporary use of this extraordinary location in the heart of Berlin.",
   address: "Karl-Marx-Allee 34, 10178 Berlin",
   music: 'Hip-Hop',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "high",
+  LGBT_rating: "yes",
   },
   {
   name: "Berghain",
   description: "Berghain is the most well-known club in Berlin - and also one of the worldwide most famous clubs. It’s the church of Techno with the best sound system you can get. So be prepared to dance for hours and listen to top quality music.",
   address: "Am Wriezener Bahnhof, 10243 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Prince Charles",
   description: "In addition to the typical club nights, there are also readings, salon evenings and other cultural events in the calendar of events of the club. The eye-catcher inside is certainly the bar, which stands in the former swimming pool. Yes, that's right! No matter if you stand or sit at the bar, you always look down to the bartender. And otherwise, the extravagant continues in the club. The home cocktail, which is called Prince Charles, means to sit back and listen to the fine electric sounds.",
   address: "Prinzenstraße 85f, 10969 Berlin",
   music: ['Techno', 'House'].sample,
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Le Wagon Kitchen",
   description: "Legendary Cocktail-Nights every second Friday of the month",
   address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
   music: 'Charts',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "low",
+  LGBT_rating: "yes",
   },
   {
   name: "Kater Blau",
   description: "From the previous owners of Bar 25 & Katerholzig, Kater Blau is a big amusement park for adults. In a huge abandoned soap factory perfectly located by the Spree, you’ll find loads of dancefloors, a huge outside area with amazing lighting and you’ll really feel like part of the city clubbing scene. As in almost every club in town, they don’t mess with the quality of the sound.",
   address: "Holzmarktstraße 25, 10243 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Sisyphos",
   description: "Sisyphos is a place like no other. It’s a festival, it’s a club, it’s a beach, it’s a bar, it’s Alice’s Wonderland. Here you will find diverse ways of having fun. With a huge chill out area, an abandoned bus, a small lake surrounded by sand, a pizza place and a labyrinth of dance floors, you might lose yourself for hours or maybe even days inside.",
   address: "Hauptstraße 15, 10317 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Salon zur Wilden Renate",
   description: "If you’ve ever dreamed about clubbing in a circus, you’ll fall in love with this club. It’s name already describes the kind of atmosphere you’ll find: WILD. Besides a big outside area, a kitsch decoration and many dance floors, their main attraction is a huge and real labyrinth. So if you get lost, you’ll be condemned to live inside a club for the rest of your life. Not bad, huh?",
   address: "Alt-Stralau 70, 10245 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "low",
+  LGBT_rating: "yes",
   },
   {
   name: "KitKat",
   description: "Anthropological travel is the best expression to describe what you’ll experience at KitKat. Before you start asking yourself the kind of trouble you’re getting into, let’s make clear that this is a sex club. Don’t be afraid, it’s not as hardcore as it seems. The bathroom cleaner might ask you, if he can watch you while you’re pissing and you’ll probably see a few guys all in fours with someone leading them with a chain around their dick, but don’t feel uncomfortable.",
   address: "Köpenicker Str. 76, 10179 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Watergate",
   description: "Watergate is a hotspot for those who want to enjoy a great night with world's premier DJ talents. Names like Eric Morillo, Chicken Lips and Adam Freeland are common guests playing house, drum and bass and break-beat. There you'll get one of the most beautiful views from the Spree through its floor-ceiling plate glass windows.",
   address: "Falckensteinstraße 49, 10997 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+ price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Club der Visionäre",
   description: "Club Der Visionaere – a collection of canalside shacks near the Spree in Kreuzberg – is the destination for those who never want the party to end. True to the Berlinische insistence of relaxation, it's an understated, marginal kind of place where clubbers hang out on post-party weekend mornings or afternoons.",
   address: "Am Flutgraben, 12435 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Ritter Butzke",
   description: "Although it cut its illegal underground roots long ago, Ritter Butzke has hardly gone mainstream. Ensconced in an old factory with the requisite industrial decor, this party temple vibrates with techno, electro and minimal every weekend.",
   address: "Ritterstraße 26, 10969 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Ipse",
   description: "Located very close to Club der Visionaere, although way bigger with a capacity of 700, Ipse is another venue making the most of its waterside spot. Parties go on both inside and outside, house and techno acts making up the bulk of the program.",
   address: "Vor dem Schlesischen Tor 2, 10997 Berlin",
   music: 'Techno',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Birigt und Bier",
   description: "At daytime a biergarten, at night time a club. At Birgit and Bier you can spend the whole day (and nigth) and enjoy the nice atmosphere.",
   address: "Schleusenufer 3, 10997 Berlin",
   music: 'House',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   {
   name: "Matrix",
   description: "The Matrix is ​​a club in Berlin. The club is known as one of the filming locations of the RTL II series Berlin - Day & Night. The club was founded in 1995 and is located since autumn 1996 in ten vaults of the U-Bahn station Warschauer Straße in the district Friedrichshain. It is open seven days a week.",
   address: "Warschauer Pl. 18, 10245 Berlin",
   music: 'Charts',
-  price_rating: (1..5).to_a.sample,
-  LGBT_rating: (1..5).to_a.sample,
+  price_rating: "medium",
+  LGBT_rating: "yes",
   },
   # {
   # name: "Heideglühen",
@@ -750,8 +750,8 @@ end
 u = 1
 1.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (1),
     user_id: u)
   check_in.save!
@@ -764,8 +764,8 @@ end
 #2 Avenue
 2.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (2),
     user_id: u)
   check_in.save!
@@ -778,8 +778,8 @@ end
 #3 Berghain
 5.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (7..10).to_a.sample,
-    queue_rating: (8..10).to_a.sample,
+    atmosphere_rating: (3..5).to_a.sample,
+    queue_rating: (3..5).to_a.sample,
     location_id: (3),
     user_id: u)
   check_in.save!
@@ -792,8 +792,8 @@ end
 #4 Prince Charles
 1.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (4),
     user_id: u)
   check_in.save!
@@ -806,8 +806,8 @@ end
 #5 Le Wagon
 8.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (5),
     user_id: u)
   check_in.save!
@@ -820,8 +820,8 @@ end
 #6 Kater Blau
 5.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (6),
     user_id: u)
   check_in.save!
@@ -834,7 +834,7 @@ end
 #7 Sisyphos
 4.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
     queue_rating: (1..3).to_a.sample,
     location_id: (7),
     user_id: u)
@@ -848,8 +848,8 @@ end
 #8 Salon
 3.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..6).to_a.sample,
-    queue_rating: (1..4).to_a.sample,
+    atmosphere_rating: (1..3).to_a.sample,
+    queue_rating: (1..3).to_a.sample,
     location_id: (8),
     user_id: u)
   check_in.save!
@@ -862,8 +862,8 @@ end
 #9 Kit Kat
 1.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (9),
     user_id: u)
   check_in.save!
@@ -876,8 +876,8 @@ end
 #10 Water Gate
 4.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (9..10).to_a.sample,
-    queue_rating: (1..2).to_a.sample,
+    atmosphere_rating: (3..5).to_a.sample,
+    queue_rating: (1..3).to_a.sample,
     location_id: (10),
     user_id: u)
   check_in.save!
@@ -890,8 +890,8 @@ end
 #11 Clube der Visionäre
 5.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (11),
     user_id: u)
   check_in.save!
@@ -904,8 +904,8 @@ end
 #12 Ritter Butzke
 5.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (12),
     user_id: u)
   check_in.save!
@@ -918,8 +918,8 @@ end
 #13 Ipse
 3.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (13),
     user_id: u)
   check_in.save!
@@ -932,8 +932,8 @@ end
 #14 Birgit & Bier
 2.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (14),
     user_id: u)
   check_in.save!
@@ -946,8 +946,8 @@ end
 #15 Matrix
 1.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..10).to_a.sample,
-    queue_rating: (1..10).to_a.sample,
+    atmosphere_rating: (1..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (15),
     user_id: u)
   check_in.save!
