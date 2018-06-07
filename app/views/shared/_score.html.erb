@@ -1,10 +1,16 @@
 <div class="row" id="no-border">
-  <ul class="list-inline">
-    <li><i class="fas fa-burn"></i></li>
-    <li id="score"><%=location.calculate_average_atmosphere %></li>
-    <li><i class="far fa-clock"></i></li>
-    <li id="score"><%= location.calculate_average_queue %></li>
-    <li><i class="fas fa-users"></i></li>
-    <li id="score"><%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count%></li>
+  <ul class="list-inline" id="stats">
+    <div class="stat-element">
+      <li><i class="fas fa-burn"></i></li>
+      <li id="stat-score"><%=location.calculate_average_atmosphere %></li>
+    </div>
+    <div class="stat-element">
+      <li><i class="far fa-clock"></i></li>
+      <li id="stat-score"><%= location.calculate_average_queue %></li>
+    </div>
+    <div class="stat-element">
+      <li><i class="fas fa-users"></i></li>
+      <li id="stat-score"><%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count%></li>
+    </div>
   </ul>
 </div>
