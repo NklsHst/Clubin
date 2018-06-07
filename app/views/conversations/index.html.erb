@@ -8,10 +8,10 @@
     </li>
     <li role="presentation" class="">
       <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
-        🤝</i> Meet someone new
-      </a>
-    </li>
-  </ul>
+      🤝</i> Meet someone new
+    </a>
+  </li>
+</ul>
 </div>
 
 <div class="page-content" id="c-page-content">
@@ -19,88 +19,88 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="friends">
         <% if @checkin_valid %>
-          <div class=”item”>
-            <% @conversations.each do |conversation| %>
-              <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-                <% if conversation.sender_id == current_user.id %>
-                  <% recipient = User.find(conversation.recipient_id) %>
-                  <% message = Message.where(conversation_id: conversation.id).last %>
-                <% else %>
-                  <% recipient = User.find(conversation.sender_id) %>
-                  <% message = Message.where(conversation_id: conversation.id).last %>
-                <% end %>
-              <div class="row">
-              <%= link_to profile_path(recipient) do %>
-              <div class="col-xs-2">
-                <div class="user-profile" style="margin-top: 15px;">
-                 <% begin %>
-                 <img src="<%= cl_image_path recipient.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
-                 <% rescue ArgumentError %>
-                 <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
-                 <% end %>
-               </div>
-             </div>
-             <div class="col-xs-8" class="no-purple">
-              <h5><%= link_to recipient.user_name, conversation_messages_path(conversation), style: "color: #606470" %></h5>
-              <%=  %>
-              <% if message != nil %>
-                <h6><%= link_to message.body[0,20], conversation_messages_path(conversation), style: "color: #606470"%></h6>
-              <% end %>
-            </div>
+        <div class=”item”>
+          <% @conversations.each do |conversation| %>
+          <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+          <% if conversation.sender_id == current_user.id %>
+          <% recipient = User.find(conversation.recipient_id) %>
+          <% message = Message.where(conversation_id: conversation.id).last %>
+          <% else %>
+          <% recipient = User.find(conversation.sender_id) %>
+          <% message = Message.where(conversation_id: conversation.id).last %>
+          <% end %>
+          <div class="row">
+            <%= link_to profile_path(recipient) do %>
             <div class="col-xs-2">
-              <div class="checkin-time">
-               <h6> <%= conversation.created_at.in_time_zone('Berlin').strftime("%I:%M") %></h6>
+              <div class="user-profile" style="margin-top: 15px;">
+<% begin %>
+              <img src="<%= cl_image_path recipient.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
+<% rescue ArgumentError %>
+               <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+<% end %>
              </div>
            </div>
-           <% end %>
-         </div>
-         <% end %>
-         <% end %>
-       </div>
-     </div>
-
-
-     <div role="tabpanel" class="tab-pane fade" id="all">
-      <h2>Start a new chat</h2>
-      <div class=”item”>
-        <% @users.each do |user| %>
-        <% if user.id != current_user.id %>
-        <div class="row">
-
-            <%= link_to profile_path(user) do %>
+           <div class="col-xs-8" class="no-purple">
+            <h5><%= link_to recipient.user_name, conversation_messages_path(conversation), style: "color: #606470" %></h5>
+            <%=  %>
+            <% if message != nil %>
+            <h6><%= link_to message.body[0,20], conversation_messages_path(conversation), style: "color: #606470"%></h6>
+            <% end %>
+          </div>
           <div class="col-xs-2">
-            <div class="user-profile" style="margin-top: 15px;">
-             <% begin %>
-             <img src="<%= cl_image_path user.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
-             <% rescue ArgumentError %>
-             <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
-             <% end %>
+            <div class="checkin-time">
+             <h6> <%= conversation.created_at.in_time_zone('Berlin').strftime("%I:%M") %></h6>
            </div>
          </div>
-         <div class="col-xs-6" class="no-purple">
-          <h5><%= link_to user.user_name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post", style: "color: #606470" %></h5>
-        </div>
-        <div class="col-xs-3">
-          <div class="btn btn-primary" id="chat-button">
-           <%= link_to "Chat", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
-         </div>
+         <% end %>
        </div>
        <% end %>
+       <% end %>
+     </div>
+   </div>
 
-          </div>
-          <% end %>
-          <% end %>
-        </div>
+
+   <div role="tabpanel" class="tab-pane fade" id="all">
+    <h2>Start a new chat</h2>
+    <div class=”item”>
+      <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+      <div class="row">
+
+        <%= link_to profile_path(user) do %>
+        <div class="col-xs-2">
+          <div class="user-profile" style="margin-top: 15px;">
+           <% begin %>
+           <img src="<%= cl_image_path user.picture, width: 40, height: 40, crop: :fill, secure: true %>" class="avatar">
+           <% rescue ArgumentError %>
+           <img src="<%= image_path "https://images-na.ssl-images-amazon.com/images/I/81tISKde7HL._SY355_.jpg", width: 40, height: 40, crop: :fill %>" class="avatar">
+           <% end %>
+         </div>
+       </div>
+       <div class="col-xs-6" class="no-purple">
+        <h5><%= link_to user.user_name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post", style: "color: #606470" %></h5>
       </div>
-      <% else %>
-       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1" style="display: flex; align-items: center; flex-direction: column;">
-          <h2 style="text-align: center;">You are not checked in anywhere. Please check in to chat.</h2>
-          <br>
-          <%= link_to "Check in now", checkins_new_path, class: "btn btn-primary" %>
-        </div>
-      </div>
-      <% end %>
-    </div>
+      <div class="col-xs-3">
+        <div class="btn btn-primary" id="chat-button">
+         <%= link_to "Chat", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
+       </div>
+     </div>
+     <% end %>
+
+   </div>
+   <% end %>
+   <% end %>
+ </div>
+</div>
+<% else %>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1" style="display: flex; align-items: center; flex-direction: column;">
+    <h2 style="text-align: center;">You are not checked in anywhere. Please check in to chat.</h2>
+    <br>
+    <%= link_to "Check in now", checkins_new_path, class: "btn btn-primary" %>
   </div>
+</div>
+<% end %>
+</div>
+</div>
 </div>

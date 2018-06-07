@@ -5,8 +5,10 @@
   <% end %>
 </div>
 <div class="chat-name">
-  <h5> Back to chat overview</h5>
+  <!-- <h5> Back to chat overview</h5> -->
+  <div class="message-counterpart"><h4>Chat with <bold><%= @conversation.sender.user_name if @conversation.sender != current_user %> <%= @conversation.recipient.user_name if @conversation.recipient != current_user %></bold></h4></div>
 </div>
+
 </div>
  <div class="background-evaluation"></div>
 
