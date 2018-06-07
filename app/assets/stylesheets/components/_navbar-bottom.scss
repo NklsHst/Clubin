@@ -14,6 +14,7 @@
 .bottom-item {
   cursor: pointer;
   width: 20%;
+  opacity: 0.5;
 }
 
 .bottom-link {
@@ -33,5 +34,6 @@
 }
 
 .active-bottom {
-
+  border-bottom: 5px solid $main-purple !important;
+  opacity: 1 !important;
 }
