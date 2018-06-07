@@ -1,13 +1,42 @@
 <div class="evaluation-container">
+  <div class="background-evaluation"></div>
   <div class="evaluation-form">
-    <h2>Welcome to <%= @checkin.location.name %></h2>
-    <h4><%= @checkin.location.address %></h4>
-      <h3>Share with the Club.In comunity</h3>
-    <%= simple_form_for(@checkin, url: checkins_update_path, method: :patch) do |f| %>
-    <%= f.input :atmosphere_rating, :collection => (1..10).to_a %>
-    <%= f.input :queue_rating, :collection => (1..10).to_a %>
-    <%= f.submit "Share", class: "btn btn-primary" %>
-    <% end %>
+    <h2><%= @checkin.location.name %></h2>
+    <form class="simple_form edit_check_in" id="edit_check_in_57" novalidate="novalidate" action="/locations/5/checkin/57/edit" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="patch">
+      <input type="hidden" name="authenticity_token" value="d1tNAy5jcPigmQ7Zi+f88SiFnz5Rg8PWASxH6fUHkMM5JilW932IvuOjEwC6s3bMGVX0920mkSGEzkQNyYFJWQ==">
+        <div class="form-group select optional check_in_atmosphere_rating">
+          <div class="br-explanation" "><p>Lame</p><p>On Fire</p></div>
+          <div class="br-wrapper br-theme-bars-1to10">
+            <select class="form-control select optional" name="check_in[atmosphere_rating]" id="check_in_atmosphere_rating" style="display: none;">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label class="form-control-label select optional" for="check_in_atmosphere_rating">🔥  Atmosphere </label>
+          </div>
+        </div>
+        <div class="form-group select optional check_in_queue_rating">
+          <div class="br-explanation" "><p>None</p><p>Endless</p></div>
+          <div class="br-wrapper br-theme-bars-1to10">
+            <select class="form-control select optional" name="check_in[queue_rating]" id="check_in_queue_rating" style="display: none;">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label class="form-control-label select optional" for="check_in_queue_rating">🚶Queue </label>
+          </div>
+        </div>
+        <input type="submit" name="commit" value="Share" class="btn btn-primary" data-disable-with="Share">
+      </div>
+    </form>
   </div>
 </div>
 

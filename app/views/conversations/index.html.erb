@@ -1,13 +1,14 @@
+
 <div class="navbar-filter nav nav-tabs" role="tablist">
   <ul class="navbar-filter nav-tabs" role="tablist">
     <li role="presentation" class="active">
       <a class="filter-item-1" href="#friends" aria-controls="friends" role="tab" data-toggle="tab">
-        <i class="far fa-comments"></i> Current chats
+        💬 Current chats
       </a>
     </li>
     <li role="presentation" class="">
       <a class="filter-item-1" href="#all" aria-controls="all" role="tab" data-toggle="tab">
-        <i class="far fa-comment"></i> Start a new chat
+        🤝</i> Meet someone new
       </a>
     </li>
   </ul>
@@ -18,7 +19,6 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="friends">
         <% if @checkin_valid %>
-          <h2>Current chats</h2>
           <div class=”item”>
             <% @conversations.each do |conversation| %>
               <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>

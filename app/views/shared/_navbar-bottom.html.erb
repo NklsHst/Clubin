@@ -1,25 +1,27 @@
 <div class="navbar-bottom">
+
   <%= link_to locations_path, class: "bottom-item bottom-link", style: "text-align: center", id: "locations" do %>
-    <i class='fas fa-home'></i>
+    🏠
   <% end %>
   <%= link_to checkins_all_path, class: "bottom-item bottom-link", style: "text-align: center", id: "friends"  do %>
-    <i class="fas fa-users"></i>
+    👯
   <% end %>
   <%= link_to checkins_new_path, class: "bottom-item bottom-link", style: "text-align: center", id: "checkin" do %>
-    <i class="fas fa-map-marker"></i>
+    📍
   <% end %>
   <%= link_to conversations_path, class: "bottom-item bottom-link", style: "text-align: center", id: "conversations" do %>
-    <i class="fas fa-comments"></i>
+    💬
   <% end %>
   <% if user_signed_in? %>
     <%= link_to profile_path(current_user), class: "bottom-item bottom-link", style: "text-align: center", id: "users" do %>
-      <i class="fas fa-user-circle"></i>
+      😎
     <% end %>
   <% else %>
     <%= link_to new_user_session_path, class: "bottom-item bottom-link", style: "text-align: center", id: "users" do %>
-      <i class="fas fa-user-circle"></i>
+      😎
     <% end %>
   <% end %>
+  
 </div>
 
 <%= content_for :after_js do %>

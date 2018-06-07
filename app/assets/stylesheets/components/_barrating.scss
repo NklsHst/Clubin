@@ -1,17 +1,57 @@
 .br-theme-bars-1to10 .br-widget a.br-selected {
     background-color: #C338FF !important;
-    width: 15px !important;
+
+    &:nth-child(1) {
+      // opacity: 0.2;
+      filter: hue-rotate(0deg);
+    }
+    &:nth-child(2) {
+      // opacity: 0.4;
+      filter: hue-rotate(20deg);
+    }
+    &:nth-child(3) {
+      // opacity: 0.6;
+      filter: hue-rotate(40deg);
+    }
+    &:nth-child(4) {
+      // opacity: 0.8;
+      filter: hue-rotate(60deg);
+    }
+    &:nth-child(5) {
+      // opacity: 1;
+      filter: hue-rotate(80deg);
+    }
 }
 
 .br-theme-bars-1to10 .br-widget a {
   background-color: white !important;
 }
 
+.br-theme-bars-1to10 .br-widget {
+  height: 40px !important;
+}
+
 .br-widget {
-    padding-left: 50px;
-    padding-right: 50px;
     display: flex;
     justify-content: center;
+
+
+    a {
+      flex: 1;
+      -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+      transition:         all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+      filter: hue-rotate(0deg);
+    }
+
+}
+
+
+.br-explanation {
+    display:  flex;
+    justify-content:  space-between;
+    margin-bottom: -12px;
+    font-size: 12px;
+    opacity: 0.9;
 }
 
 .br-theme-bars-1to10 .br-widget .br-current-rating {
