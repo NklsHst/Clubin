@@ -13,7 +13,8 @@ before_action :authenticate_user!
       {
         lat: location.latitude,
         lng: location.longitude,
-        # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+        #label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+        icon: ActionController::Base.helpers.asset_path("pin.png"),
         infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
     end
@@ -56,7 +57,7 @@ before_action :authenticate_user!
         lng: @location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
         infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) },
-        # icon: image_tag('club.png')
+        icon: ActionController::Base.helpers.asset_path('club.png')
       }
     @markers << @marker
   end
