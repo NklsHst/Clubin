@@ -13,7 +13,18 @@ before_action :authenticate_user!
       {
         lat: location.latitude,
         lng: location.longitude,
-        icon: location.calculate_average_atmosphere >= 7 ? ActionController::Base.helpers.asset_path("pin.png") : ActionController::Base.helpers.asset_path("pin3.png"),
+        icon: if location.calculate_average_atmosphere >= 7
+                ActionController::Base.helpers.asset_path("pin-hot2.svg")
+              elsif location.calculate_average_atmosphere >= 4
+                ActionController::Base.helpers.asset_path("pin-medium.svg")
+              else
+                ActionController::Base.helpers.asset_path("pin-low.svg")
+              end,
+
+
+
+
+        # location.calculate_average_atmosphere >= 7 ? ActionController::Base.helpers.asset_path("pin-hot2.svg") : ActionController::Base.helpers.asset_path("pin3.png"),
         #label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
 
         infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }

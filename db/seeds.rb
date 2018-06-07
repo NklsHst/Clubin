@@ -75,7 +75,7 @@ pictures = [
 user_1 = User.new(
     user_name: "James",
     email: "James@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_1.save!
@@ -84,7 +84,7 @@ user_1 = User.new(
   user_2 = User.new(
     user_name: "Mary",
     email: "Mary@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_2.save!
@@ -93,7 +93,7 @@ user_1 = User.new(
   user_3 = User.new(
     user_name: "John",
     email: "John@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_3.save!
@@ -102,7 +102,7 @@ user_1 = User.new(
   user_4 = User.new(
     user_name: "Robert",
     email: "Robert@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_4.save!
@@ -111,7 +111,7 @@ user_1 = User.new(
   user_5 = User.new(
     user_name: "Michael",
     email: "Michael@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_5.save!
@@ -120,7 +120,7 @@ user_1 = User.new(
   user_6 = User.new(
     user_name: "Patricia",
     email: "Patricia@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_6.save!
@@ -129,7 +129,7 @@ user_1 = User.new(
   user_7 = User.new(
     user_name: "William",
     email: "William@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_7.save!
@@ -138,7 +138,7 @@ user_1 = User.new(
   user_8 = User.new(
     user_name: "Linda",
     email: "Linda@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_8.save!
@@ -147,7 +147,7 @@ user_1 = User.new(
   user_9 = User.new(
     user_name: "David",
     email: "David@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_9.save!
@@ -156,7 +156,7 @@ user_1 = User.new(
   user_10 = User.new(
     user_name: "Barbara",
     email: "Barbara@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_10.save!
@@ -165,7 +165,7 @@ user_1 = User.new(
   user_11 = User.new(
     user_name: "Richard",
     email: "Richard@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_11.save!
@@ -174,7 +174,7 @@ user_1 = User.new(
   user_12 = User.new(
     user_name: "Charles",
     email: "Charles@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_12.save!
@@ -183,7 +183,7 @@ user_1 = User.new(
   user_13 = User.new(
     user_name: "Elizabeth",
     email: "Elizabeth@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_13.save!
@@ -192,7 +192,7 @@ user_1 = User.new(
   user_14 = User.new(
     user_name: "Jennifer",
     email: "Jennifer@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_14.save!
@@ -201,7 +201,7 @@ user_1 = User.new(
   user_15 = User.new(
     user_name: "Joseph",
     email: "Joseph@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_15.save!
@@ -210,7 +210,7 @@ user_1 = User.new(
   user_16 = User.new(
     user_name: "Maria",
     email: "Maria@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_16.save!
@@ -219,7 +219,7 @@ user_1 = User.new(
   user_17 = User.new(
     user_name: "Thomas",
     email: "Thomas@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_17.save!
@@ -228,7 +228,7 @@ user_1 = User.new(
   user_18 = User.new(
     user_name: "Susan",
     email: "Susan@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_18.save!
@@ -237,7 +237,7 @@ user_1 = User.new(
   user_19 = User.new(
     user_name: "Margaret",
     email: "Margaret@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_19.save!
@@ -246,7 +246,7 @@ user_1 = User.new(
   user_20 = User.new(
     user_name: "Dorothy",
     email: "Dorothy@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_20.save!
@@ -255,7 +255,7 @@ user_1 = User.new(
   user_21 = User.new(
     user_name: "Christopher",
     email: "Christopher@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_21.save!
@@ -264,7 +264,7 @@ user_1 = User.new(
   user_22 = User.new(
     user_name: "Lisa",
     email: "Lisa@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_22.save!
@@ -273,7 +273,7 @@ user_1 = User.new(
   user_23 = User.new(
     user_name: "Daniel",
     email: "Daniel@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_23.save!
@@ -282,7 +282,7 @@ user_1 = User.new(
   user_24 = User.new(
     user_name: "Paul",
     email: "Paul@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_24.save!
@@ -291,7 +291,7 @@ user_1 = User.new(
   user_25 = User.new(
     user_name: "Mark",
     email: "Mark@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_25.save!
@@ -300,7 +300,7 @@ user_1 = User.new(
   user_26 = User.new(
     user_name: "Nancy",
     email: "Nancy@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_26.save!
@@ -309,7 +309,7 @@ user_1 = User.new(
   user_27 = User.new(
     user_name: "Donald",
     email: "Donald@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_27.save!
@@ -318,7 +318,7 @@ user_1 = User.new(
   user_28 = User.new(
     user_name: "George",
     email: "George@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_28.save!
@@ -327,7 +327,7 @@ user_1 = User.new(
   user_29 = User.new(
     user_name: "Kenneth",
     email: "Kenneth@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_29.save!
@@ -336,7 +336,7 @@ user_1 = User.new(
   user_30 = User.new(
     user_name: "Karen",
     email: "Karen@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_30.save!
@@ -345,7 +345,7 @@ user_1 = User.new(
   user_31 = User.new(
     user_name: "Steven",
     email: "Steven@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_31.save!
@@ -354,7 +354,7 @@ user_1 = User.new(
   user_32 = User.new(
     user_name: "Edward",
     email: "Edward@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_32.save!
@@ -363,7 +363,7 @@ user_1 = User.new(
   user_33 = User.new(
     user_name: "Brian",
     email: "Brian@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_33.save!
@@ -372,7 +372,7 @@ user_1 = User.new(
   user_34 = User.new(
     user_name: "Betty",
     email: "Betty@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_34.save!
@@ -381,7 +381,7 @@ user_1 = User.new(
   user_35 = User.new(
     user_name: "Helen",
     email: "Helen@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_35.save!
@@ -390,7 +390,7 @@ user_1 = User.new(
   user_36 = User.new(
     user_name: "Ronald",
     email: "Ronald@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_36.save!
@@ -399,7 +399,7 @@ user_1 = User.new(
   user_37 = User.new(
     user_name: "Sandra",
     email: "Sandra@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_37.save!
@@ -408,7 +408,7 @@ user_1 = User.new(
   user_38 = User.new(
     user_name: "Donna",
     email: "Donna@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_38.save!
@@ -417,7 +417,7 @@ user_1 = User.new(
   user_39 = User.new(
     user_name: "Anthony",
     email: "Anthony@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_39.save!
@@ -426,7 +426,7 @@ user_1 = User.new(
   user_40 = User.new(
     user_name: "Carol",
     email: "Carol@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_40.save!
@@ -435,7 +435,7 @@ user_1 = User.new(
   user_41 = User.new(
     user_name: "Kevin",
     email: "Kevin@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_41.save!
@@ -444,7 +444,7 @@ user_1 = User.new(
   user_42 = User.new(
     user_name: "Jason",
     email: "Jason@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_42.save!
@@ -453,7 +453,7 @@ user_1 = User.new(
   user_43 = User.new(
     user_name: "Matthew",
     email: "Matthew@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_43.save!
@@ -462,7 +462,7 @@ user_1 = User.new(
   user_44 = User.new(
     user_name: "Gary",
     email: "Gary@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_44.save!
@@ -471,7 +471,7 @@ user_1 = User.new(
   user_45 = User.new(
     user_name: "Ruth",
     email: "Ruth@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_45.save!
@@ -480,7 +480,7 @@ user_1 = User.new(
   user_46 = User.new(
     user_name: "Timothy",
     email: "Timothy@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_46.save!
@@ -489,7 +489,7 @@ user_1 = User.new(
   user_47 = User.new(
     user_name: "Sharon",
     email: "Sharon@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_47.save!
@@ -498,7 +498,7 @@ user_1 = User.new(
   user_48 = User.new(
     user_name: "Jose",
     email: "Jose@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_48.save!
@@ -507,7 +507,7 @@ user_1 = User.new(
   user_49 = User.new(
     user_name: "Michelle",
     email: "Michelle@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_49.save!
@@ -516,7 +516,7 @@ user_1 = User.new(
   user_50 = User.new(
     user_name: "Laura",
     email: "Laura@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_50.save!
@@ -526,7 +526,7 @@ user_1 = User.new(
   user_51 = User.new(
     user_name: "Sarah",
     email: "sarah@test.de",
-    about_me:"",
+    about_me:"I love clubbing, outdoor activities and hanging out with my friends. Besides electronic music I also have a weakness for hip-hop. During the summer I therefore enjoy the festival season around Berlin.",
     password: "123456",
     password_confirmation: "123456")
   user_51.save!
@@ -537,7 +537,7 @@ user_1 = User.new(
   user_52 = User.new(
   user_name: "Kai",
   email: "kai@test.de",
-  about_me:"",
+  about_me:"Passionate Coder. My teammates call me the King of Backend. Party motto: Go hard or go harder!",
   password: "123456",
   password_confirmation: "123456")
 user_52.save!
@@ -548,7 +548,7 @@ users << user_52
   user_53 = User.new(
   user_name: "Niklas",
   email: "niklas@test.de",
-  about_me:"",
+  about_me: "Cheers !!!",
   password: "123456",
   password_confirmation: "123456")
 user_53.save!
@@ -572,7 +572,7 @@ photos = [
   'https://res.cloudinary.com/dy4yxobpa/image/upload/v1527862547/lewagon.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_810/v1528286596/katerblau.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/v1528286603/sisyphos-club-berlin.jpg',
-  'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287419/renate_1.jpg',
+  'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_900/v1528376340/renate_2.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287450/Kitkat.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287484/Watergate.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/v1528287484/Visionaere.jpg',
