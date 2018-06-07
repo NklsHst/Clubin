@@ -890,8 +890,8 @@ end
 #11 Factory
 5.times do
   check_in = CheckIn.new(
-    atmosphere_rating: (1..5).to_a.sample,
-    queue_rating: (4..5).to_a.sample,
+    atmosphere_rating: (4..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
     location_id: (11),
     user_id: u)
   check_in.save!
