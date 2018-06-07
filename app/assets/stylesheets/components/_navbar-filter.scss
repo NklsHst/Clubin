@@ -11,11 +11,26 @@
   width: 100%;
   z-index: 1;
   list-style-type: none;
+
+  a {
+    padding: 10px 0px;
+  }
+
+  i {
+    opacity: 0.4
+  }
+}
+
+#active {
+  border-bottom: 2px solid #c337ff
+}
+
+#active > i {
+  opacity: 1;
 }
 
 .nav-tabs {
   padding: 0px;
-
 }
 
 .nav-tabs > li.active > a {
@@ -76,6 +91,3 @@
   border-right: none;
 }
 
-#fire {
-  color: red;
-}
