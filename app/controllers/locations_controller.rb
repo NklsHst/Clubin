@@ -70,7 +70,7 @@ before_action :authenticate_user!
         lng: @location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
         infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) },
-        icon: ActionController::Base.helpers.asset_path("pin.png")
+        icon: ActionController::Base.helpers.asset_path("pin-hot2.svg")
       }
     @markers << @marker
   end
