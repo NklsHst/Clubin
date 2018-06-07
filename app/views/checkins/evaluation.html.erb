@@ -2,7 +2,7 @@
   <div class="background-evaluation"></div>
   <div class="evaluation-form">
     <h2><%= @checkin.location.name %></h2>
-    <form class="simple_form edit_check_in" id="edit_check_in_57" novalidate="novalidate" action="/locations/5/checkin/57/edit" accept-charset="UTF-8" method="post">
+    <form class="simple_form edit_check_in" id="edit_check_in_p<%=@checkin.id%> " novalidate="novalidate" action="/locations/<%=@checkin.location.id%>/checkin/<%=@checkin.id%>/edit" accept-charset="UTF-8" method="post">
       <input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="authenticity_token" value="d1tNAy5jcPigmQ7Zi+f88SiFnz5Rg8PWASxH6fUHkMM5JilW932IvuOjEwC6s3bMGVX0920mkSGEzkQNyYFJWQ==">
