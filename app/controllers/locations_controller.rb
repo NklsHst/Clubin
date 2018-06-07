@@ -13,9 +13,9 @@ before_action :authenticate_user!
       {
         lat: location.latitude,
         lng: location.longitude,
-        icon: if location.calculate_average_atmosphere >= 7
+        icon: if location.calculate_average_atmosphere >= 4
                 ActionController::Base.helpers.asset_path("pin-hot2.svg")
-              elsif location.calculate_average_atmosphere >= 4
+              elsif location.calculate_average_atmosphere >= 2
                 ActionController::Base.helpers.asset_path("pin-medium.svg")
               else
                 ActionController::Base.helpers.asset_path("pin-low.svg")
