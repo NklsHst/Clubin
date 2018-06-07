@@ -39,7 +39,7 @@
         </div>
         <div class="col-xs-2">
           <div class="checkin-time">
-           <h6> <%= checkin.created_at.strftime("%I:%M") %></h6>
+           <h6> <%= checkin.created_at.in_time_zone('Berlin').strftime("%I:%M") %></h6>
          </div>
        </div>
        <% end %>
