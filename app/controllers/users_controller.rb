@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :find, only: [:show]
 
   def show
+    begin
+      find
+    rescue Exception => e
+      redirect_to root_path
+    end
   end
 
    private

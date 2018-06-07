@@ -13,9 +13,23 @@ before_action :authenticate_user!
       {
         lat: location.latitude,
         lng: location.longitude,
-        # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+        icon: if location.calculate_average_atmosphere >= 7
+                ActionController::Base.helpers.asset_path("pin-hot2.svg")
+              elsif location.calculate_average_atmosphere >= 4
+                ActionController::Base.helpers.asset_path("pin-medium.svg")
+              else
+                ActionController::Base.helpers.asset_path("pin-low.svg")
+              end,
+
+
+
+
+        # location.calculate_average_atmosphere >= 7 ? ActionController::Base.helpers.asset_path("pin-hot2.svg") : ActionController::Base.helpers.asset_path("pin3.png"),
+        #label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
+
         infoWindow: { content: render_to_string(partial: "/locations/map_box", locals: { location: location }) }
       }
+
     end
     @markers = @markers.compact
   end
@@ -56,7 +70,7 @@ before_action :authenticate_user!
         lng: @location.longitude,
         # label: "#{location.calculate_average_atmosphere.to_s}/#{location.calculate_average_queue.to_s}",
         infoWindow: { content: render_to_string(partial: "/locations/map_box_two", locals: { location: location }) },
-        # icon: image_tag('club.png')
+        icon: ActionController::Base.helpers.asset_path("pin-hot2.svg")
       }
     @markers << @marker
   end

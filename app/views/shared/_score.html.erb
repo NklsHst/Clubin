@@ -1,4 +1,5 @@
 <div class="row" id="no-border">
+
   <ul class="list-inline grey-icons">
     <span>🔥</span>
     <li id="score"><%=location.calculate_average_atmosphere %></li>
@@ -6,5 +7,6 @@
     <li id="score"><%= location.calculate_average_queue %></li>
     <span>👯</span>
     <li id="score"><%= location.users.joins("LEFT OUTER JOIN friendships ON friendships.partner_id = users.id ").where('friendships.user_id = ?', current_user.id).count%></li>
+
   </ul>
 </div>

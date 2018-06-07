@@ -15,7 +15,10 @@
   <%= link_to profile_path(current_user), class: "bottom-item bottom-link", style: "text-align: center" do %>
     😎
   <% end %>
+
   <% else %>
-  <%= link_to new_user_session_path %>
+    <%= link_to new_user_session_path, class: "bottom-item bottom-link", style: "text-align: center" do %>
+      <i class="fas fa-user-circle"></i>
+    <% end %>
   <% end %>
 </div>

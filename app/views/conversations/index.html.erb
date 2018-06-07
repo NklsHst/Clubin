@@ -64,7 +64,7 @@
       <h2>Start a new chat</h2>
       <div class=”item”>
         <% @users.each do |user| %>
-        <% if user.id != current_user.id && ## if in same location %>
+        <% if user.id != current_user.id %>
         <div class="row">
 
             <%= link_to profile_path(user) do %>
