@@ -1,9 +1,22 @@
-<div class="navbar-filter">
-  <%= link_to edit_user_registration_path(@user), class: "filter-item-1 filter-link", style: "text-align: center" do %>
-  <i class="far fa-edit"></i> Edit profile
-  <% end %>
-  <%= link_to destroy_user_session_path(@user), class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center" do %>
-  <i class="fas fa-sign-out-alt"></i> Sign Out
+<div class="navbar-filter" style="display: flex; justify-content: space-around; align-items: center;">
+  <% if @user == current_user %>
+
+    <%= link_to edit_user_registration_path(@user), class: "filter-item-1 filter-link", style: "text-align: center" do %>
+      <i class="far fa-edit"></i> Edit profile
+    <% end %>
+
+    <%= link_to destroy_user_session_path(@user), class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center" do %>
+      <i class="fas fa-sign-out-alt"></i> Sign Out
+    <% end %>
+
+  <% else %>
+
+  <!-- when you are not looking at your own profile -->
+
+    <%= link_to conversations_path, class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center" do %>
+      <i class="fas fa-comments"></i> Message now
+    <% end %>
+
   <% end %>
 </div>
 
