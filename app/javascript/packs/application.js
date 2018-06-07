@@ -1,4 +1,5 @@
 import "bootstrap";
+import "ionicons";
 // import "../components/navbar";
 import { initBarrating } from "./barrating.js" ;
 import { toggleFullScreen } from "./fullscreen.js" ;

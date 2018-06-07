@@ -5,6 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
     "gmaps": "^0.4.24",
+    "ionicons": "^4.1.2",
     "jquery": "^3.3.1",
     "jquery-bar-rating": "^1.2.2"
   },
