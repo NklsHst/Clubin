@@ -2,9 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    unless current_user
+    begin
       find
-    else
+    rescue Exception => e
       redirect_to root_path
     end
   end
