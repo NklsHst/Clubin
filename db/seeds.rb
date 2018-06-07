@@ -575,7 +575,7 @@ photos = [
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_900/v1528376340/renate_2.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287450/Kitkat.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287484/Watergate.jpg',
-  'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528392603/visionaaere-new.jpg',
+  'http://res.cloudinary.com/dy4yxobpa/image/upload/v1528405723/Factory.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287468/Butzke.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287448/ipse-berlin.jpg',
   'https://res.cloudinary.com/dy4yxobpa/image/upload/c_scale,w_800/v1528287468/Birgit.jpg',
@@ -663,11 +663,11 @@ location = Location.create!([{
   LGBT_rating: "yes",
   },
   {
-  name: "Club der Visionäre",
-  description: "Club Der Visionaere – a collection of canalside shacks near the Spree in Kreuzberg – is the destination for those who never want the party to end. True to the Berlinische insistence of relaxation, it's an understated, marginal kind of place where clubbers hang out on post-party weekend mornings or afternoons.",
-  address: "Am Flutgraben, 12435 Berlin",
-  music: 'Techno',
-  price_rating: "medium",
+  name: "Factory",
+  description: "During Pitch Nigth of the awsome Le Wagon Crowd this Club turns into the Pregame Place for the Partypeople. You can meet people and personalities with a diverce background but everybody has the same in mind: Coding and clubing!",
+  address: "Rheinsberger Str. 76, 10115 Berlin",
+  music: 'Charts',
+  price_rating: "low",
   LGBT_rating: "yes",
   },
   {
@@ -887,11 +887,11 @@ end
   u += 1
 end
 
-#11 Clube der Visionäre
+#11 Factory
 5.times do
   check_in = CheckIn.new(
     atmosphere_rating: (1..5).to_a.sample,
-    queue_rating: (1..5).to_a.sample,
+    queue_rating: (4..5).to_a.sample,
     location_id: (11),
     user_id: u)
   check_in.save!
