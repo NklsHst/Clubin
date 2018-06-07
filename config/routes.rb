@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Routes for location controller
-  get '/locations', to: 'locations#index', as: :locations
+  get '/locations/all', to: 'locations#index', as: :locations
   get '/locations/atmosphere', to: 'locations#index_atmosphere', as: :index_atmosphere
   get '/locations/queue', to: 'locations#index_queue', as: :index_queue
   get '/locations/:id', to: 'locations#show', as: :location
