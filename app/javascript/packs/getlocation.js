@@ -39,9 +39,9 @@ function printLocation(data) {
     document.getElementById("check_in_location_id").value = data.id
     checkin_button.classList.remove("loading-state")
     checkin_button.classList.add("active-state")
-    console.log(data.photo.url)
+    secureUrl = securePhotoLink(data.photo.url)
     $('#checkin-button').hide();
-    checkin_button.style.backgroundImage =  `radial-gradient(ellipse at center, rgba(195,56,255,0.1) 0%, rgba(79,79,79,0.6) 100%), url(${data.photo.url})`
+    checkin_button.style.backgroundImage =  `radial-gradient(ellipse at center, rgba(195,56,255,0.1) 0%, rgba(79,79,79,0.6) 100%), url(${secureUrl})`
     checkin_button.style.setProperty("-webkit-transition", "background-image 5s linear")
     $('#checkin-button').fadeIn("slow");
     checkin_button.disabled = false
@@ -60,6 +60,11 @@ function submitButton() {
       form.submit();
     });
   }
+}
+
+function securePhotoLink(url) {
+  url = url.replace(/^http:\/\//i, 'https://');
+  return(url)
 }
 
 // call all functions
