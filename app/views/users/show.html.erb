@@ -5,7 +5,7 @@
       <i class="far fa-edit"></i> Edit profile
     <% end %>
 
-    <%= link_to destroy_user_session_path(@user), class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center" do %>
+    <%= link_to destroy_user_session_path(@user), class: "filter-item-1 filter-link", id: "no-border", style: "text-align: center", method: :delete do %>
       <i class="fas fa-sign-out-alt"></i> Sign Out
     <% end %>
 
