@@ -3,10 +3,10 @@
   <%= link_to locations_path, class: "bottom-item bottom-link", style: "text-align: center", id: "locations" do %>
     🏠
   <% end %>
-  <%= link_to checkins_all_path, class: "bottom-item bottom-link", style: "text-align: center", id: "friends"  do %>
+  <%= link_to checkins_all_path, class: "bottom-item bottom-link", style: "text-align: center", id: "friendscheckins"  do %>
     👯
   <% end %>
-  <%= link_to checkins_new_path, class: "bottom-item bottom-link", style: "text-align: center", id: "checkin" do %>
+  <%= link_to checkins_new_path, class: "bottom-item bottom-link", style: "text-align: center", id: "checkins" do %>
     📍
   <% end %>
   <%= link_to conversations_path, class: "bottom-item bottom-link", style: "text-align: center", id: "conversations" do %>
@@ -21,7 +21,7 @@
       😎
     <% end %>
   <% end %>
-  
+
 </div>
 
 <%= content_for :after_js do %>
