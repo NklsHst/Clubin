@@ -37,4 +37,6 @@ Rails.application.routes.draw do
   # Routes for third party authentification management
   resources :authentications, only: [:destroy]
 
+  get '*path' => redirect('/404')
+
 end
