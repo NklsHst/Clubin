@@ -663,7 +663,7 @@ location = Location.create!([{
   LGBT_rating: "yes",
   },
   {
-  name: "Factory",
+  name: "Factory Berlin",
   description: "During Pitch Nigth of the awsome Le Wagon Crowd this Club turns into the Pregame Place for the Partypeople. You can meet people and personalities with a diverce background but everybody has the same in mind: Coding and clubing!",
   address: "Rheinsberger Str. 76, 10115 Berlin",
   music: 'Charts',
