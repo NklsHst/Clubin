@@ -68,7 +68,7 @@ function securePhotoLink(url) {
 }
 
 // call all functions
-setTimeout(getLocation(), 2000)
+setTimeout(getLocation, 2000)
 submitButton()
 
 // export { getLocation, showPosition }
