@@ -803,6 +803,20 @@ end
   u += 1
 end
 
+#11 Factory
+8.times do
+  check_in = CheckIn.new(
+    atmosphere_rating: (4..5).to_a.sample,
+    queue_rating: (1..5).to_a.sample,
+    location_id: (11),
+    user_id: u)
+  check_in.save!
+
+  p check_in
+  check_ins << check_in
+  u += 1
+end
+
 #5 Le Wagon
 5.times do
   check_in = CheckIn.new(
@@ -887,19 +901,6 @@ end
   u += 1
 end
 
-#11 Factory
-8.times do
-  check_in = CheckIn.new(
-    atmosphere_rating: (4..5).to_a.sample,
-    queue_rating: (1..5).to_a.sample,
-    location_id: (11),
-    user_id: u)
-  check_in.save!
-
-  p check_in
-  check_ins << check_in
-  u += 1
-end
 
 #12 Ritter Butzke
 5.times do
