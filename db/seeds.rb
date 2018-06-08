@@ -804,7 +804,7 @@ end
 end
 
 #5 Le Wagon
-8.times do
+5.times do
   check_in = CheckIn.new(
     atmosphere_rating: (1..5).to_a.sample,
     queue_rating: (1..5).to_a.sample,
@@ -888,7 +888,7 @@ end
 end
 
 #11 Factory
-5.times do
+8.times do
   check_in = CheckIn.new(
     atmosphere_rating: (4..5).to_a.sample,
     queue_rating: (1..5).to_a.sample,
